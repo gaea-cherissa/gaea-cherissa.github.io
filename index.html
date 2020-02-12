@@ -1,8 +1,742 @@
----
-layout: default
-title: Hank Quinlan, Horrible Cop
----
-<div class="blurb">
-	<h1>Hi there, I'm Hank Quinlan!</h1>
-	<p>I'm best known as the horrible cop from <em>A Touch of Evil</em> Don't trust me. <a href="/about">Read more about my life...</a></p>
-</div><!-- /.blurb -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8"/>
+
+    <title>gaea cherissa | art</title>
+
+<style type="text/css" media="screen"><!--
+* {
+box-sizing: border-box;
+padding: 0px;
+margin: 0px;
+}
+
+body {
+background-color: black;
+font-family: 'Courier New', Courier, monospace;
+color: white;
+margin: auto;
+white-space: nowrap;
+height: 500px;
+width: 800px;
+}
+
+a {color: white;
+word-break: break-all;}
+
+a:hover {  color:#9DC209;}
+
+h1 {
+font-family: 'Libre Baskerville', serif;
+font-weight: 550;
+font-size: 5em;
+}
+h1:hover {color: white;}
+
+.gaea {
+ justify-content: flex-start; 
+padding-bottom: 0px;
+position: relative;
+top: 18px;
+}
+
+nav {
+font-weight: 200;
+font-style: normal;
+padding-top: 4px;
+padding-bottom: 4px;
+position: relative;
+left: 13px;
+}
+
+nav.a {
+text-decoration: none;
+color: white;
+padding: 5px;
+}
+
+.navbar {
+display: flex;
+justify-content: space-evenly;
+width: 100%;
+padding-bottom: 10px;
+}
+
+
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+display: inline;
+}
+
+li a, .dropbtn {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  text-decoration: none;
+}
+
+li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #aeC209;
+opacity: 0.95;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,1);
+  z-index: 1;
+border: 1px solid black;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #8da105;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+.container {
+display: flex;
+flex-direction: column;
+margin-top: 1%;
+margin-left: 10%;
+margin-right: 10%;
+margin-bottom: 10%;
+}
+
+.container2 {
+display: flex;
+flex-direction: column;
+padding: 5px;
+}
+
+.container3 {
+display: flex;
+height: 380px;
+border: 1px solid white;
+padding: 12px;
+}
+.container4 {
+display: flex;
+border: 0px ;
+padding: 0px;
+}
+
+.thumbs {
+display: flex;
+order: 1;
+width: 160px;
+flex-direction: column;
+overflow-x: hidden;
+overflow-y: scroll;
+}
+
+.thumbs img {
+width:100%;
+padding: 0 0 5px 0;
+}
+
+.main {
+display: flex;
+order: 2;
+justify-content: center;
+align-items: center;
+}
+
+.main img {
+max-width: 380px; 
+max-height: 350px;
+padding: 6px;
+}
+
+.desc { 
+order: 3;
+width: 230px;
+align-self: flex-end;
+padding: 6px;
+}
+
+.phorow {
+display: flex;
+padding: 0 4px;
+overflow-x: hidden;
+overflow-y: scroll;
+}
+
+.phocol {
+flex: 33%;
+max-width: 33%;
+white-space: normal;
+flex-direction: column;
+padding: 0 4px;
+
+}
+
+.phocol img {
+margin-top: 8px;
+vertical-align: middle;
+width: 100%;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 50px;
+  padding-top: 50px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+}
+
+.modal-content {
+  position: relative;
+  margin: auto;
+  padding-bottom: 40px;
+  width: 90%;
+  max-width: 1200px;
+  height: 100%;
+max-height: 900px;
+background-color: black;
+}
+
+.close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.mySlides {
+  display: none;
+height: 100%;
+}
+
+.mySlides img {
+display: block;
+max-width: 100%;
+height: 100%;
+margin: auto;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.bio {
+display: flex;
+background-image: url(/home/gaea-cherissa/Documents/ArtWebsite/wading.jpg);
+background-size: 100%;
+width: 100%;
+justify-content: flex-end;
+}
+
+.biotext {
+background: #00000080;
+padding: 12px;
+width: 350px;
+height: 180px;
+overflow-x: hidden;
+overflow-y: scroll;
+white-space: normal;
+margin-top: 20px;
+margin-right: 20px;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  font-family: 'Courier New', Courier, monospace;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #aeC209;
+  font-family: 'Courier New', Courier, monospace;
+  color: black;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,1);
+  border: 1px solid black;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 16px;
+}
+
+input[type=submit]:hover {
+  background-color: #8da105;
+}
+
+.contactform-container {
+  padding: 16px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  white-space: normal;
+  height: 100%;
+  width: 100%;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+margin-bottom: 20px;
+}
+
+.mourning {
+position: relative;
+left:29px;
+top: 18px;
+}
+
+.container-cherissa {
+display: flex;
+order: 2;
+flex-direction: column;
+justify-content: flex-end;
+}
+
+.cherissa {
+order: 1;
+justify-content: flex-end;
+padding-bottom: 0px;
+}
+
+.send { order: 2;}
+
+
+/* Mobile Styles */
+@media only screen and (max-width: 400px) {
+  body {
+    
+  }
+}
+
+/* Tablet Styles */
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+  body {
+    
+  }
+}
+
+/* Desktop Styles */
+@media only screen and (min-width: 961px) {
+  body {
+    max-width: 900px;
+  }
+}
+</style>
+<script language="Javascript" type="text/javascript">
+
+/* To build out the content of the site, look in the javascript (right after the css in the file) and the first thing you will see is a giant "object" called site. You can sort of imagine how it works. { "key" : "value" } in javascript means an object, which is a list of key-value pairs. [ {...}, {...}, ... ] means an array of objects. So for example the global "nav" is an object which contains "paintings", "illustration", et c. Meanwhile "paintings" is an object with its own nav, which is your submenu of earthscapes, dystopic present, et c. See wikipedia for JSON for more info on the syntax here. Some of those pages have a "gallery", which is an array of objects, each one has a "fn" (filename, but without the .jpg or _thumb.jpg), title, year, medium, size, and "desc". desc is a big blob of whatever HTML you want to use to describe it. You can see that teshekpuk has all these attributes defined but iliamna only has some, so only part of the description shows up for iliamna when you click on it. The rest have nothing defined so nothing shows up in the description area. You can fill in more descriptions and filenames to put content into the site. */
+
+/* Here we specify the overall structure of the page in JSON */
+/* This is how we edit the site. The javascript will generate the HTML */
+var site = {  
+  "nav" : {
+    "paintings" : {
+      "nav" : {
+        "earthscapes" : {
+          "gallery": [			
+            { "slide" : 0,
+	      "fn": "teshekpuk",
+              "title" : "Teshekpuk",
+              "year" : "2019",
+              "medium" : "Oil on canvas",
+              "size" : "2' x 2'",
+              "desc" : "<p>Teshekpuk Lake is the world’s largest thermokarst lake in Alaska’s North Slope region, recently slated to be developed for oil by ConocoPhilips without consideration of environmental impact. Teshekpuk Lake is a critical habitat for migratory waterfowl, the Teshekpuk Caribou Herd, and other wildlife. The Native Village of Nuiqsut and several environmental advocacy organizations are currently suing the federal government over the decision to allow oil-drilling in this special place.</p><br><br><a href=\"https://www.defendthesacredalaska.org/protect-teshekpuk/\">(Article)</a><br><br> <a href=\"\">(Published in The Conversation...)</a>" },
+            { "slide" : 1,
+	      "fn": "iliamna",
+              "title" : "Iliamna",
+              "year" : "2019",
+              "medium" : "Oil on canvas",
+	      "size" : "2' x 2'",
+	      "desc" : "Lake Iliamna is the largest lake in Alaska, , and the cradle for salmon spawn for Bristol Bay -- the last intact and thriving salmon fishery in the world. This precious watershed has been under threat from the proposed mining project, Pebblie Mine. Alaskans passionate about salmon have been staving off attempts to mine this region. Salmon fisheries along the southern Pacific west coast of North America have dwindled to a trickle in comparison as a result of damaged habitats and . We must remain vigilant to prevent this amazing ecosystem from becoming another sad story of what once was. </p><br><br><a href=\"https://www.savebristolbay.org/\">(Link)</a><br><br>" },
+            { "slide" : 2,
+	      "fn" : "phytoplankton",  
+	      "title" : "Diatoms",
+	      "year" : "2019",
+              "medium" : "Oil on canvas",
+	      "size" : "2' x 2'",
+	      "desc" : "Phytoplankton paint the colors of the ocean – brilliant shades of green and turquoise, undulating in teeming swirls. Tiny photosynthesizing creatures, they are the base of the marine food web. They are at the foundation of life in the ocean. In the Gulf of Alaska, blooms of diatoms flourish on a influx of nutrients and minerals flushed in by annual glacial melt in the spring. Ocean acidification and warming are expected to impact the composition of phytoplankton communities – changing the colors of the oceans – and effecting a bottom-up reverberation the dynamics of ocean creatures." },
+            { "fn": "land", 
+	      "title" : "Taiga Study 1",
+	      "year" : "2019",
+              "medium" : "<p>Graphite pencil</p> <p>on paper</p>",
+	      "size" : "8\" x 8\""},
+          ] },
+        "dystopic present" : { 
+          "gallery": [
+	    { "fn" : "cars",
+	      "title" : "Autoimmune",
+	      "year" : "2019",
+	      "medium" : "Oil on canvas",
+	      "size" : "11\" x 14\"",
+	      "desc" : "In Fairbanks, Alaska, the coldest winter days plummet to extreme subzero temperatures. A bowl-shaped topography of the town sets up a \"temperature inversion\" in which cold air settles in low places. Air pollutants cannot escape, and collect as well, creating gauzy, smoggy conditions through which the low-lying sun can peek through." },
+	    { "fn" : "harvey",
+	      "title" : "Harvey's Omens",
+	      "year" : "2017",
+	      "medium" : "Oil paint",
+	      "size" : "18\" x 24\"",
+	      "desc" : "In August 2017, Hurricane Harvey inundated Texas with 50 feet of water, forcing the country's largest refineries to shut down and causing damage including a large chemical spill. Such surreal scenes of chaos are more and more becoming the norm in the age of the Anthropocene, inducing increasingly ominous sentiments in today's zeitgeist."  },
+ 	    { "fn" : "river",
+	      "title" : "River Turned Red",
+	      "year" : "2017",
+	      "medium" : "Oil on canvas",
+	      "size" : "11\" x 14\"" },
+            { "fn" : "powerlines",
+	      "title" : "Scavengers",
+	      "year" : "2016",
+	      "medium" : "Watercolor",
+	      "size" : "4\" x 6\"" }, 
+ 	    ] },
+        "nature": {
+          "gallery": [
+ 	    { "fn" : "michaux",
+	      "title" : "Michaux",
+	      "year" : "2016",
+	      "medium" : "Oil on canvas",
+	      "size" : "18\" x 24\"" },
+	    { "fn" : "mushrooms",
+	      "title" : "Amanita",
+	      "year" : "2019",
+	      "medium" : "Acrylic on canvas",
+	      "size" : "4\" x 4\"" },
+            { "fn" : "birches",
+	      "title" : "Creamer's Birches",
+	      "year" : "2019",
+	      "medium" : "Acrylic on canvas",
+	      "size" : "4\" x 6\"" },
+	    ] },
+         "figures": {
+          "gallery": [
+	    { "fn" : "settling",
+	      "title" : "Settling",
+	      "year" : "2010",
+	      "medium" : "Oil on canvas",
+	      "size" : "46\" x 60\"" },
+	    { "fn" :  "sedna",
+	      "title" : "Soothing Sedna",
+	      "year" : "2009",
+	      "medium" : "Oil on canvas",
+	      "size" : "18\" x 24\"" },
+	    { "fn" : "sleepingmollie",
+	      "title" : "Sleeping Mollie, 2 a.m.",
+	      "year" : "2010",
+	      "medium" : "Oil on canvas",
+	      "size" : "18\" x 24\"" },
+] } } },
+    "illustration" : {
+      "gallery": [
+          {   "slide" : 1,
+	      "fn" : "say",
+	      "title" : "Negation",
+	      "year" : "2017",
+	      "desc" : "<br><p>Published in:</p><br><p><a href=\"https://www.buzzfeed.com/tomchivers/the-periphrastic-spree\">Buzzfeed</a></p><p><a href=\"https://www.theguardian.com/science/2017/nov/01/resistance-to-changes-in-grammar-is-futile-say-researchers\">The Guardian</a><br><br><p>This illustration was created to accompany a press release for a paper titled, \"Detecting evolutionary forces in language change\", published in the scientific journal, Nature in 2017. The illustration depicts the history of forms of negation in the English language over time, represented by characters from notorious pieces of literature (from left to right, \“Ic ne secge\” (Beowulf, c. 900) to \“Ic ne sege noht\” (the Ormulum, c. 1100) to \“I seye not\” (Chaucer, c. 1400) to \“I doe not say\” (Shakespeare, c. 1600) before returning to the familiar \“I don’t say\” (Virginia Woolf, c. 1900).</p>" },
+	   {  "slide" : 2,
+	      "fn" : "Qlogo",
+	      "title" : "Logo for Quadirah",
+	      "year" : "2017",
+	      "desc" : "Quadirah's etsy shop: <br><a href=\"https://www.etsy.com/shop/QDee\">https://www.etsy.com/shop/QDee</a>" },
+ 	   {  "slide" : 3,
+	      "fn" : "openhand",
+	      "title" : "Logo for Open Hand",
+	      "year" : "2017",
+	      "desc" : "<p><a href=\"https://openhandband.weebly.com/\">https://openhandband.weebly.com/</a></p>" },
+ ] },
+    "photographs" : {},
+    "about" : {},
+    "contact" : {} } }
+
+/* translate between spaces and dashes in navigation headings */
+var fragify = function (str) {
+  return(str.replace(/ /g,'-')) }
+var defragify = function (str) {
+  return(str.replace(/-/g,' ')) }
+
+/* If a function is called with missing arguments (less than declared), the missing values are set to: undefined
+Sometimes this is acceptable, but sometimes it is better to assign a default value to the parameter */
+
+/* Provide a default if undefined */  /* see below, desc.innerHTML */
+var defor = function (val, def) {
+  if(typeof val === 'undefined') { return(def) }
+  else { return(val) } }
+
+/* This generates the main image and description HTML and puts it in place */
+var loadimage = function(imgobj) { 
+  var main = document.getElementById('main') ;
+  var desc = document.getElementById('desc') ;
+
+  main.innerHTML = '<img id="imain" src="images/' + imgobj.fn + '.jpg" />' + '<div id="myModal" class="modal">' ;		//from lightbox
+  desc.innerHTML = '<p><em>' + defor(imgobj.title, '') + '</em></p><br>' +
+    '<p>' + defor(imgobj.year, '') + '</p>' +
+	'<p>' + defor(imgobj.medium, '') + '</p>' + 
+	'<p>' + defor(imgobj.size, '') + '<div id="description" ' + 
+    'style="white-space: normal; height: 250px; overflow-y: scroll; ' + 
+    'overflow-x: hidden">' + 
+    '</p><br>' +
+    defor(imgobj.desc, '') + 
+    '</div>' } 
+
+
+/* This creates the "gallery" object. */
+var loadgallery = function(galobj) {
+  var div = document.getElementById('container3') ;
+  div.innerHTML = '<div class="thumbs" id="thumbs"></div>' + 
+    '<div class="main" id="main"></div>' + '<aside class="desc" id="desc"></aside>' ;
+  var thumbs = document.getElementById('thumbs') ;
+
+/* This sets up the thumbnail image gallery and adds event handlers */
+  ih = "" ;		// ih contains an empty value: The value is "", the typeof is "string" 
+  for (i in galobj.gallery) {		// The for/in statement loops through the properties of an object. The block of code inside the loop will be executed once for each property.
+    var painting = galobj.gallery[i] ;
+    var img = document.createElement("img") ;		// img = thumbnails
+    img.setAttribute("src", "images/" + painting.fn + "_thumb.jpg") ;		// img src = thumbnail file of given painting
+    img.addEventListener("click", function () {
+      loadimage(this) }.bind(painting), false) ;   //TO DO .bind is deprecated, need to change to on
+    thumbs.appendChild(img) ; }
+
+  loadimage(galobj.gallery[0]) ;
+  document.getElementById("imain").addEventListener("click",  function(){ 
+	openModal(); 
+	document.getElementById("myModal").innerHTML = '<span class="close cursor" onclick="closeModal()">&times;</span><div class="modal-content"><div class="mySlides"><img class="modal-content" id="img01"></div><a class="prev" onclick="plusSlides(-1)">&#10094;</a><a class="next" onclick="plusSlides(1)">&#10095;</a></div>' ;
+	
+		
+	for (s in painting.slide) ; 
+	document.getElementById("img01").src = "images/" + painting.fn + ".jpg" ;
+	currentSlide( s ) 
+	});	 } 
+
+
+/*modal pop-up*/
+function openModal() {
+  document.getElementById("myModal").style.display = "block";
+}
+
+function closeModal() {
+  document.getElementById("myModal").style.display = "none";
+}
+
+/*advances to next img*/
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+/*displays current img*/
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+/*generates modal slides*/
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+
+/* Main section intro pages (TO DO)*/
+var paintings = '';	
+
+var illus = '';
+
+var illusmodal = '<div class="mySlides"><img src=\"photographs/020.jpg\"></div> <a class="prev" onclick="plusSlides(-1)">&#10094;</a><a class="next" onclick="plusSlides(1)">&#10095;</a>';
+
+
+/*var mi = document.getElementById("imain") ; 
+var modalImg = document.getElementById("img01");
+mi.addEventListener("click", function(){ alert("Hello World!"); }); */
+
+var photo = '<div class=\"phorow\" id=\"phorow\"><div class=\"phocol\" id=\"phocol\"><img class=\"photog\" src=\"photographs/001.jpg\" onclick="openModal();currentSlide(1)"><img class=\"photog\" src=\"photographs/004.jpg\" onclick="openModal();currentSlide(4)"><img class=\"photog\" src=\"photographs/007.jpg\" onclick="openModal();currentSlide(7)"><img class=\"photog\" src=\"photographs/010.jpg\" onclick="openModal();currentSlide(10)"><img class=\"photog\" src=\"photographs/013.jpg\" onclick="openModal();currentSlide(13)"><img class=\"photog\" src=\"photographs/016.jpg\" onclick="openModal();currentSlide(16)"><img class=\"photog\" src=\"photographs/019.jpg\" onclick="openModal();currentSlide(19)"><img class=\"photog\" src=\"photographs/022.jpg\" onclick="openModal();currentSlide(22)"><img class=\"photog\" src=\"photographs/025.jpg\" onclick="openModal();currentSlide(25)"><img class=\"photog\" src=\"photographs/026.jpg\" onclick="openModal();currentSlide(26)"></div><div class=\"phocol\" id=\"phocol\"><img class=\"photog\" src=\"photographs/002.jpg\" onclick="openModal();currentSlide(2)"><img class=\"photog\" src=\"photographs/005.jpg\" onclick="openModal();currentSlide(5)"><img class=\"photog\" src=\"photographs/008.jpg\" onclick="openModal();currentSlide(8)"><img class=\"photog\" src=\"photographs/011.jpg\" onclick="openModal();currentSlide(11)"><img class=\"photog\" src=\"photographs/014.jpg\" onclick="openModal();currentSlide(14)"><img class=\"photog\" src=\"photographs/017.jpg\" onclick="openModal();currentSlide(17)"><img class=\"photog\" src=\"photographs/023.jpg\" onclick="openModal();currentSlide(23)"></div><div class=\"phocol\" id=\"phocol\"><img class=\"photog\" src=\"photographs/003.jpg\" onclick="openModal();currentSlide(3)"><img class=\"photog\" src=\"photographs/006.jpg\" onclick="openModal();currentSlide(6)"><img class=\"photog\" src=\"photographs/009.jpg\" onclick="openModal();currentSlide(9)"><img class=\"photog\" src=\"photographs/012.jpg\" onclick="openModal();currentSlide(12)"><img class=\"photog\" src=\"photographs/015.jpg\" onclick="openModal();currentSlide(15)"><img class=\"photog\" src=\"photographs/018.jpg\" onclick="openModal();currentSlide(18)"><img class=\"photog\" src=\"photographs/021.jpg\" onclick="openModal();currentSlide(21)"><img class=\"photog\" src=\"photographs/024.jpg\" onclick="openModal();currentSlide(24)"><img class=\"photog\" src=\"photographs/027.jpg\" onclick="openModal();currentSlide(27)"><img class=\"photog\" src=\"photographs/020.jpg\" onclick="openModal();currentSlide(20)"></div></div><div id="myModal" class="modal"><span class="close cursor" onclick="closeModal()">&times;</span><div class="modal-content"><div class="mySlides"><img src=\"photographs/001.jpg\"></div><div class="mySlides"><img src=\"photographs/002.jpg\"></div><div class="mySlides"><img src=\"photographs/003.jpg\"></div><div class="mySlides"><img src=\"photographs/004.jpg\"></div><div class="mySlides"><img src=\"photographs/005.jpg\"></div><div class="mySlides"><img src=\"photographs/006.jpg\"></div><div class="mySlides"><img src=\"photographs/007.jpg\"></div><div class="mySlides"><img src=\"photographs/008.jpg\"></div><div class="mySlides"><img src=\"photographs/009.jpg\"></div><div class="mySlides"><img src=\"photographs/010.jpg\"></div><div class="mySlides"><img src=\"photographs/011.jpg\"></div><div class="mySlides"><img src=\"photographs/012.jpg\"></div><div class="mySlides"><img src=\"photographs/013.jpg\"></div><div class="mySlides"><img src=\"photographs/014.jpg\"></div><div class="mySlides"><img src=\"photographs/015.jpg\"></div><div class="mySlides"><img src=\"photographs/016.jpg\"></div><div class="mySlides"><img src=\"photographs/017.jpg\"></div><div class="mySlides"><img src=\"photographs/018.jpg\"></div><div class="mySlides"><img src=\"photographs/019.jpg\"></div><div class="mySlides"><img src=\"photographs/020.jpg\"></div><div class="mySlides"><img src=\"photographs/021.jpg\"></div><div class="mySlides"><img src=\"photographs/022.jpg\"></div><div class="mySlides"><img src=\"photographs/023.jpg\"></div><div class="mySlides"><img src=\"photographs/024.jpg\"></div><div class="mySlides"><img src=\"photographs/025.jpg\"></div><div class="mySlides"><img src=\"photographs/026.jpg\"></div><div class="mySlides"><img src=\"photographs/027.jpg\"></div> <a class="prev" onclick="plusSlides(-1)">&#10094;</a><a class="next" onclick="plusSlides(1)">&#10095;</a>';
+
+
+/*About page*/
+var bio = '<div class=\"bio\" id=\"bio\"><img src=\'\'><div class=\"biotext\"<p>Gaea Cherissa Dukelow is an artist/ecologist, living, working, painting, exploring, and reflecting in Fairbanks, Alaska. At odd hours of the night, she can be found haunting a small studio space in the back hallway of Well Street Art Company. Having studied art at the Maryland Institute College of Art in Baltimore, MD and forest ecology at SUNY College of Environmental Science and Forestry in Syracuse, New York, she manifests a view of the world that mixes intuition, ritual, and myth-making with critical analysis and fact-finding. Inspired both by the infinite beauty of the natural world and the mourning of its destruction, she grapples with the cognitive dissonance left behind in the wake of this strange, modern world, memorializing this sensation with the vividness of traditional painting media. </p></div></div>';
+
+/*Contact page*/
+var contactform = '<div class=\"contactform-container\" id=\"contactform\"><p><em>Send me messages:</em></p><br><form action=\"/action_page.php\"><label for=\"name\">Name</label><input type=\"text\" id=\"name\" name=\"name\" placeholder=\"Your name..\"><label for=\"name\">Email Address</label><input type=\"text\" id=\"email\" name=\"email\" placeholder=\"Your email address..\"><label for=\"subject\">Subject</label><input type=\"text\" id=\"subject\" name=\"subject\" placeholder=\"Subject..\"><label for=\"subject\">Message</label><textarea id=\"subject\" name=\"subject\" placeholder=\"Write something..\" style=\"height:200px\"></textarea><input type=\"submit\" value=\"Submit\"></form></div>';
+
+
+/* the hash.substring is the "fragment identifier" (see wikipedia, excerpt below). By loading
+the appropriate content corresponding to the fragment identifier, you can make
+stable shareable links. */
+	/* The fragment identifier introduced by a hash mark # is the optional last part of a URL for a document. 
+	It is typically used to identify a portion of that document. Example: In http://www.example.org/foo.html#bar 
+	the fragment refers to the element with id="bar". */
+/* This section is creating the fragments of the page - the sections and subsections - based on the structure of var site above.*/
+var loadfragment = function (fragarg) {
+  var frag = (typeof fragarg === 'string') ? fragarg : 		/* ? : is the 'conditional operator' --- condition ? value-if-true : 
+									value-if-false (in other words, the question is equivalent to an if statement and 									the colon is equivalent to else statement*/
+    window.location.hash.substring(1) ;      /* obtains the fragment identifier (value afer #) from url --- the element id, or in this case, the JS "keys" in var site */
+  var parts = frag.split('.')		/* The split() method is used to split a string into an array of substrings, and returns the new array.
+					This splits the fragments of site into an array (splits up the key:pair sections at '.').
+					This ultimately creates i.e. paintings.earthscpes becomes #paintings.earthscapes */
+
+  var page = site		/* var site is the whole structure of the webpage, defined above in a big chunk. (array of objects) */
+    var d = "dystopic-present" ;
+    var dp = defragify(d) ;
+    var loadseg = function (seg) {
+	  document.getElementById("container3").innerHTML = seg } 
+    for (i in parts) {		/* The for/in statement loops through the properties of an object. 
+				The block of code inside the loop will be executed once for each property.  
+				This statement is looping through the array 'parts' created above from 	the fragments. */
+      if (typeof page !== 'undefined') {		/* if var page is set = to something (contains an additional subsection), see next line 
+						to determine which subsection of the page should be loaded, 
+						i.e. which part of var site we're at */
+        page = page.nav[defragify(parts[i])] }		/*var defragify replaces dashes with spaces. This specifies which subsection to load based on i part */
+
+      
+		     }
+    if (typeof page === 'undefined') { 		/* if var page is not set = to anything (default); default main page to load first is 		
+							earthscapes page */
+      loadgallery(site.nav.paintings.nav.earthscapes) }
+    if (frag == "paintings") { loadgallery(site.nav.paintings.nav.earthscapes) }
+    if (frag == "paintings.earthscapes") { loadgallery(site.nav.paintings.nav.earthscapes) }
+    if (frag == "paintings" + "." + d) { loadgallery(site.nav.paintings.nav[defragify(dp)]) }
+    if (frag == "paintings.nature") { loadgallery(site.nav.paintings.nav.nature) }	
+    if (frag == "paintings.figures") { loadgallery(site.nav.paintings.nav.figures) }		 
+    if (frag == "illustration") { loadgallery(site.nav.illustration) }
+    if (frag == "photographs") { loadseg(photo) }
+    if (frag == "about") { loadseg(bio) }
+    if (frag == "contact") { loadseg(contactform) }		/* Links to other sections now work after getting rid of the else argument (but make sure all sections are assigned */
+    
+ }		
+
+
+/* ^ This whole section is to create the sections of the webpage and how to choose which one should be loaded.  */
+
+
+/* This makes the navigation bar */
+var makenavbar = function () {
+  var navbar = document.getElementById('navbar') ;
+  var ih = "<nav><ul>" ;
+  for (var page in site.nav) {		// The for/in statement loops through the properties of an object. The block of code inside the loop will be executed once for each property.
+    if (site.nav[page].nav) {
+      ih = ih + '<li class="dropdown">' ;
+      ih = ih + '<a href="#' + fragify(page) + '" onClick="loadfragment(\'' + 		/* fragify is replacing spaces with dashes for sections that have titles with spaces in them
+											   loadfragment is creating # links to sections of the webpage from the values in var site
+												This is creating the links for each fragment. */
+        fragify(page) + '\')" class="dropbtn">' + 
+        page + '</a>' ;
+      ih = ih + '<div class="dropdown-content">' ;
+      for (var subpage in site.nav[page].nav) { 
+        ih = ih + '<a href="#' + fragify(page + '.' + subpage) + 
+          '" onClick="loadfragment(\'' + 
+          fragify(page + '.' + subpage) + '\')" class="dropbtn">' + 
+          subpage + '</a>' ;
+      }
+      ih = ih + '</div>' ;
+    } else {
+      ih = ih + '<li><a href="#' + fragify(page) + 
+        '" onClick="loadfragment(\'' + fragify(page) + '\')">' + 
+        page + '</a></li>' ;
+  } }
+  ih = ih + "</ul></nav>" ;
+  navbar.innerHTML = ih }
+
+/* When the HTML is loaded, we call all these functions to create the rest of
+  the HTML for the site */
+window.addEventListener("load", makenavbar) ;
+window.addEventListener("load", loadfragment) ;
+
+</script>
+</head>
+<body>
+
+<div class="container"> 
+
+	  <div class="gaea">
+		<a href="index-mgn-gcd.html" style="text-decoration: none"><h1>gæa</h1></a>
+	  </div>
+
+	<div class="container2"> 
+
+		<!-- Navigation Bar -->
+		  <div id="navbar" class="navbar">
+          </div>
+		<div class="container3" id="container3"> 
+           <!-- Javascript fills this in --> 
+		</div>
+        <!-- Footer is the same for all pages -->
+			<footer>
+				<aside class="mourning">
+				<p>Painting, illustration, <p></p>ecological romanticism &amp; <p></p>mourning</p></aside>
+
+				<div class="container-cherissa">
+					<div class="cherissa">
+					<a href="index-mgn-gcd.html" style="text-decoration: none"><h1>cherissa</h1></a>
+					</div>
+					<aside class="send">
+					<p>Send messages to: 
+					<p></p>cherissa [ at ] localpost.io</p>
+					</aside>
+			</footer>
+		</div>
+	</div>
+</div>
+</body>
+
