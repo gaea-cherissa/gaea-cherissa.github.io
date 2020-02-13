@@ -21,7 +21,7 @@ color: white;
 margin: auto;
 white-space: nowrap;
 height: 500px;
-width: 800px;
+width: 900px;
 }
 
 a {color: white;
@@ -144,8 +144,10 @@ padding: 0px;
 
 .thumbs {
 display: flex;
+flex-shrink: 0;
+flex-grow: 0; 
+width: 17%;
 order: 1;
-width: 160px;
 flex-direction: column;
 overflow-x: hidden;
 overflow-y: scroll;
@@ -162,17 +164,21 @@ display: flex;
 order: 2;
 justify-content: center;
 align-items: center;
+width: 53%;
 }
 
 .main img {
-max-width: 380px; 
+width: 100%;
 max-height: 350px;
 padding: 0 10px 0 10px;
 }
 
 .desc { 
+flex-shrink: 0;
+flex-grow: 0; 
+width: 30%;
+height: 100%;
 order: 3;
-width: 230px;
 align-self: flex-end;
 padding: 6px;
 }
@@ -740,4 +746,5 @@ window.addEventListener("load", loadfragment) ;
 	</div>
 </div>
 </body>
+
 
