@@ -4,6 +4,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8"/>
+    <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville&display=swap" rel="stylesheet"> 
 
     <title>gaea cherissa | art</title>
 
@@ -18,11 +19,25 @@ body {
 background-color: black;
 font-family: 'Courier New', Courier, monospace;
 color: white;
-margin: auto;
 white-space: nowrap;
-height: 500px;
-width: 900px;
 }
+
+/* Mobile Styles */
+@media only screen and (max-width: 400px) {
+  body {
+     width: 390px;
+     height: 500px;
+  
+  } }
+
+  
+/* Desktop Styles */
+@media only screen and (min-width: 401px) {
+  body {
+    height: 500px;
+    width: 900px;
+    margin: auto;
+  } }
 
 a {color: white;
 word-break: break-all;}
@@ -36,13 +51,89 @@ font-size: 5em;
 }
 h1:hover {color: white;}
 
+/* Mobile Styles */
+@media only screen and (max-width: 400px) {
+.gaea {
+
+} }
+/* Desktop Styles */
+@media only screen and (min-width: 401px) {
 .gaea {
  justify-content: flex-start; 
 padding-bottom: 0px;
 position: relative;
 top: 18px;
+} }
+
+
+/* Mobile Styles */
+@media only screen and (max-width: 400px) {
+nav {
+font-weight: 200;
+position: relative;
 }
 
+
+.navbar {
+display: flex;
+justify-content: space-evenly;
+width: 100%;
+padding-bottom: 10px;
+}
+
+.navbar {
+     flex-direction: column;
+border: 3px solid red;
+}
+
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+li a, .dropbtn {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 5px;
+  text-decoration: none;
+}
+
+li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #aeC209;
+opacity: 0.95;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,1);
+  z-index: 1;
+border: 1px solid black;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #8da105;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+}
+  
+/* Desktop Styles */
+@media only screen and (min-width: 401px) {
 nav {
 font-weight: 200;
 font-style: normal;
@@ -53,8 +144,6 @@ left: 13px;
 }
 
 nav.a {
-text-decoration: none;
-color: white;
 padding: 5px;
 }
 
@@ -63,9 +152,8 @@ display: flex;
 justify-content: space-evenly;
 width: 100%;
 padding-bottom: 10px;
+border: 3px solid red;
 }
-
-
 
 ul {
   list-style-type: none;
@@ -113,6 +201,7 @@ border: 1px solid black;
 .dropdown:hover .dropdown-content {
   display: block;
 }
+}
 
 
 .container {
@@ -136,6 +225,7 @@ height: 380px;
 border: 1px solid white;
 padding: 12px;
 }
+
 .container4 {
 display: flex;
 border: 0px ;
@@ -168,7 +258,7 @@ width: 53%;
 }
 
 .main img {
-width: 100%;
+max-width: 100%;
 max-height: 350px;
 padding: 0 10px 0 10px;
 }
@@ -339,11 +429,42 @@ input[type=submit]:hover {
   width: 100%;
 }
 
+/* Mobile Styles */
+@media only screen and (max-width: 400px) {
 footer {
   display: flex;
   justify-content: space-between;
 margin-bottom: 20px;
 }
+.mourning {
+position: relative;
+left:29px;
+top: 18px;
+}
+
+.container-cherissa {
+display: flex;
+order: 2;
+flex-direction: column;
+justify-content: flex-end;
+}
+
+.cherissa {
+order: 1;
+justify-content: flex-end;
+padding-bottom: 0px;
+}
+
+.send { order: 2;}
+}
+
+/* Desktop Styles */
+@media only screen and (min-width: 401px) {
+footer {
+  display: flex;
+  justify-content: space-between;
+margin-bottom: 20px;
+} 
 
 .mourning {
 position: relative;
@@ -365,28 +486,9 @@ padding-bottom: 0px;
 }
 
 .send { order: 2;}
-
-
-/* Mobile Styles */
-@media only screen and (max-width: 400px) {
-  body {
-    
-  }
 }
 
-/* Tablet Styles */
-@media only screen and (min-width: 401px) and (max-width: 960px) {
-  body {
-    
-  }
-}
 
-/* Desktop Styles */
-@media only screen and (min-width: 961px) {
-  body {
-    max-width: 900px;
-  }
-}
 </style>
 <script language="Javascript" type="text/javascript">
 
@@ -529,7 +631,7 @@ var loadimage = function(imgobj) {
   var main = document.getElementById('main') ;
   var desc = document.getElementById('desc') ;
 
-  main.innerHTML = '<img id="imain" src="images/' + imgobj.fn + '.jpg" />' + '<div id="myModal" class="modal">' ;		//from lightbox
+  main.innerHTML = '<img id="imain" src="images/' + imgobj.fn + '.jpg" />' + '<div id="myModal" class="modal">' ;		//from lightbox 
   desc.innerHTML = '<p><em>' + defor(imgobj.title, '') + '</em></p><br>' +
     '<p>' + defor(imgobj.year, '') + '</p>' +
 	'<p>' + defor(imgobj.medium, '') + '</p>' + 
@@ -549,24 +651,32 @@ var loadgallery = function(galobj) {
   var thumbs = document.getElementById('thumbs') ;
 
 /* This sets up the thumbnail image gallery and adds event handlers */
-  ih = "" ;		// ih contains an empty value: The value is "", the typeof is "string" 
-  for (i in galobj.gallery) {		// The for/in statement loops through the properties of an object. The block of code inside the loop will be executed once for each property.
+  ih = "" ;		
+  for (i in galobj.gallery) {		
     var painting = galobj.gallery[i] ;
-    var img = document.createElement("img") ;		// img = thumbnails
-    img.setAttribute("src", "images/" + painting.fn + "_thumb.jpg") ;		// img src = thumbnail file of given painting
+    var img = document.createElement("img") ;		
+    img.setAttribute("src", "images/" + painting.fn + "_thumb.jpg") ;		
     img.addEventListener("click", function () {
-      loadimage(this) }.bind(painting), false) ;   //TO DO .bind is deprecated, need to change to on
+    loadimage(this) }.bind(painting), false) ;   //TO DO .bind is deprecated, need to change to on
     thumbs.appendChild(img) ; }
 
   loadimage(galobj.gallery[0]) ;
-  document.getElementById("imain").addEventListener("click",  function(){ 
+  document.getElementById("imain").addEventListener("click",  function(a){ 
 	openModal(); 
-	document.getElementById("myModal").innerHTML = '<span class="close cursor" onclick="closeModal()">&times;</span><div class="modal-content"><div class="mySlides"><img class="modal-content" id="img01"></div><a class="prev" onclick="plusSlides(-1)">&#10094;</a><a class="next" onclick="plusSlides(1)">&#10095;</a></div>' ;
+	
+	document.getElementById("myModal").innerHTML = '<span class="close cursor" onclick="closeModal()">&times;</span><div class="modal-content"><div class="mySlides"><img id="img01"></div><a class="prev" onclick="plusSlides(-1)">&#10094;</a><a class="next" onclick="plusSlides(1)">&#10095;</a></div>' ;
 	
 		
-	for (s in painting.slide) ; 
-	document.getElementById("img01").src = "images/" + painting.fn + ".jpg" ;
-	currentSlide( s ) 
+	//for (s in galobj.gallery) ; 
+	//var isrc = 'document.getElementById(\"img01\").src' ;
+	//var islide = painting.slide ;
+	currentSlide( a ) ;
+
+	//var pslides = site.nav.paintings.nav[
+	//var galslides = .gallery.slide[s];
+	//displayedSlide(galslides);
+//Object.keys(gallery.slide)
+
 	});	 } 
 
 
@@ -658,9 +768,7 @@ var loadfragment = function (fragarg) {
 
       
 		     }
-    if (typeof page === 'undefined') { 		/* if var page is not set = to anything (default); default main page to load first is 		
-							earthscapes page */
-      loadgallery(site.nav.paintings.nav.earthscapes) }
+    if (typeof page === 'undefined') { 	loadgallery(site.nav.paintings.nav.earthscapes) }
     if (frag == "paintings") { loadgallery(site.nav.paintings.nav.earthscapes) }
     if (frag == "paintings.earthscapes") { loadgallery(site.nav.paintings.nav.earthscapes) }
     if (frag == "paintings" + "." + d) { loadgallery(site.nav.paintings.nav[defragify(dp)]) }
@@ -669,9 +777,8 @@ var loadfragment = function (fragarg) {
     if (frag == "illustration") { loadgallery(site.nav.illustration) }
     if (frag == "photographs") { loadseg(photo) }
     if (frag == "about") { loadseg(bio) }
-    if (frag == "contact") { loadseg(contactform) }		/* Links to other sections now work after getting rid of the else argument (but make sure all sections are assigned */
-    
- }		
+    if (frag == "contact") { loadseg(contactform) }		
+     }		
 
 
 /* ^ This whole section is to create the sections of the webpage and how to choose which one should be loaded.  */
