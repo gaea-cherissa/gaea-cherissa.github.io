@@ -25,9 +25,9 @@ white-space: nowrap;
 /* Mobile Styles */
 @media only screen and (max-width: 400px) {
   body {
-     width: 390px;
-     height: 500px;
-  
+height: 70%;
+width: 90%;
+ margin: auto;
   } }
 
   
@@ -44,17 +44,30 @@ word-break: break-all;}
 
 a:hover {  color:#9DC209;}
 
+/* Mobile Styles */
+@media only screen and (max-width: 400px) {
+h1 {
+font-family: 'Libre Baskerville', serif;
+font-weight: 350;
+font-size: 3em;
+}
+}
+
+/* Desktop Styles */
+@media only screen and (min-width: 401px) {
 h1 {
 font-family: 'Libre Baskerville', serif;
 font-weight: 550;
 font-size: 5em;
-}
+} }
+
 h1:hover {color: white;}
 
 /* Mobile Styles */
 @media only screen and (max-width: 400px) {
 .gaea {
-
+position: relative;
+padding-bottom: 0px;
 } }
 /* Desktop Styles */
 @media only screen and (min-width: 401px) {
@@ -75,24 +88,26 @@ position: relative;
 
 
 .navbar {
-display: flex;
-justify-content: space-evenly;
+
 width: 100%;
 padding-bottom: 10px;
-}
 
-.navbar {
-     flex-direction: column;
 border: 3px solid red;
 }
 
 
 ul {
+display: none;
+float: right;
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
+ #nav:target > ul
+        {
+            display: block;
+        }
 
 li a, .dropbtn {
   display: inline-block;
@@ -204,6 +219,50 @@ border: 1px solid black;
 }
 
 
+
+
+/* Mobile Styles */
+@media only screen and (max-width: 400px) {
+.container {
+height: 100%;
+display: flex;
+flex-direction: column;
+
+}
+.container2 {
+display: flex;
+flex-direction: column;
+height: 100%;
+}
+.container3 {
+display: flex;
+flex-direction: column;
+height: 345px;
+overflow-y: auto; 
+overflow-x: hidden;
+border: 1px solid white;
+padding: 4px;
+margin: 4px;
+} 
+
+.thumbs {
+display: flex;
+flex-shrink: 0;
+flex-grow: 0; 
+height: 10%x;
+order: 1;
+overflow-x: auto;
+overflow-y: hidden;
+}
+
+.thumbs img {
+width: 100%;
+height: auto;
+padding: 0 10px 5px  0;
+} }
+
+/* Desktop Styles */
+@media only screen and (min-width: 401px) {
 .container {
 display: flex;
 flex-direction: column;
@@ -212,25 +271,17 @@ margin-left: 10%;
 margin-right: 10%;
 margin-bottom: 10%;
 }
-
 .container2 {
 display: flex;
 flex-direction: column;
 padding: 5px;
 }
-
 .container3 {
 display: flex;
 height: 380px;
 border: 1px solid white;
 padding: 12px;
-}
-
-.container4 {
-display: flex;
-border: 0px ;
-padding: 0px;
-}
+} 
 
 .thumbs {
 display: flex;
@@ -247,8 +298,43 @@ overflow-y: scroll;
 width: 100%;
 height: auto;
 padding: 0 10px 5px  0;
+} }
+
+/* Mobile Styles */
+@media only screen and (max-width: 400px) {
+.main {
+display: flex;
+order: 2;
+justify-content: center;
+align-self: center;
+width: 90%;
 }
 
+.main img {
+max-width: 100%;
+max-height: 345px;
+justify-content: center;
+align-items: center;
+padding: 0 5px 0 5px;
+} 
+
+.desc { 
+width: 100%;
+height: ;
+order: 3;
+justify-content: flex-start;
+align-self: flex-end;
+padding: 2px;
+} 
+
+.description {
+white-space: normal; 
+padding: 0 8px 0 0;
+height: 100px;
+} }
+
+/* Desktop Styles */
+@media only screen and (min-width: 401px) {
 .main {
 display: flex;
 order: 2;
@@ -261,7 +347,7 @@ width: 53%;
 max-width: 100%;
 max-height: 350px;
 padding: 0 10px 0 10px;
-}
+} 
 
 .desc { 
 flex-shrink: 0;
@@ -271,7 +357,15 @@ height: 100%;
 order: 3;
 align-self: flex-end;
 padding: 6px;
-}
+} 
+
+.description {
+white-space: normal; 
+height: 250px; 
+overflow-y: auto; 
+padding: 0 8px 0 0;
+overflow-x: hidden;
+} }
 
 .phorow {
 display: flex;
@@ -432,30 +526,21 @@ input[type=submit]:hover {
 /* Mobile Styles */
 @media only screen and (max-width: 400px) {
 footer {
-  display: flex;
-  justify-content: space-between;
-margin-bottom: 20px;
+padding: 0;
 }
 .mourning {
-position: relative;
-left:29px;
-top: 18px;
+display: none;
 }
 
 .container-cherissa {
-display: flex;
-order: 2;
-flex-direction: column;
-justify-content: flex-end;
+float: right;
+
 }
 
 .cherissa {
-order: 1;
-justify-content: flex-end;
-padding-bottom: 0px;
 }
 
-.send { order: 2;}
+.send { display: none;}
 }
 
 /* Desktop Styles */
@@ -501,7 +586,13 @@ var site = {
     "paintings" : {
       "nav" : {
         "earthscapes" : {
-          "gallery": [			
+          "gallery": [	
+	    { "fn" : "mackenzie",
+	      "title" : "Deh Cho",
+	      "year" : "2020",
+	      "medium" : "Oil on canvas",
+	      "size" : "2\" x 2\"" ,
+	      "desc" : "Deh Cho, AKA Kuukpak, AKA the Mackenzie River is the second longest river in North America. This great river flows northwest across a great expanse of frozen taiga and tundra, and discharges an incredible amount of freshwater into the Beaufort Sea - the Arctic Ocean - particularly in early summer as large amounts of snow and ice melt and drain into the watershed. The warm, fresh, river water and sediment swirl into the Beaufort Sea and stir and break up the sea ice. This water entering the Arctic Ocean from the Mackenzie River contributes largely to the regulation of ocean circulation and extent of sea-ice cover." },		
             { "slide" : 0,
 	      "fn": "teshekpuk",
               "title" : "Teshekpuk",
@@ -515,7 +606,7 @@ var site = {
               "year" : "2019",
               "medium" : "Oil on canvas",
 	      "size" : "2' x 2'",
-	      "desc" : "Lake Iliamna is the largest lake in Alaska, , and the cradle for salmon spawn for Bristol Bay -- the last intact and thriving salmon fishery in the world. This precious watershed has been under threat from the proposed mining project, Pebblie Mine. Alaskans passionate about salmon have been staving off attempts to mine this region. Salmon fisheries along the southern Pacific west coast of North America have dwindled to a trickle in comparison as a result of damaged habitats and . We must remain vigilant to prevent this amazing ecosystem from becoming another sad story of what once was. </p><br><br><a href=\"https://www.savebristolbay.org/\">(Link)</a><br><br>" },
+	      "desc" : "Lake Iliamna is the largest lake in Alaska, and the cradle for salmon spawn for Bristol Bay -- the last intact and thriving salmon fishery in the world. This precious watershed has been under threat from the proposed mining project, Pebble Mine. Alaskans passionate about salmon have been staving off attempts to mine this region. Salmon fisheries along the southern Pacific west coast of North America have dwindled to a trickle in comparison as a result of damaged habitats and . We must remain vigilant to prevent this amazing ecosystem from becoming another sad story of what once was. </p><br><br><a href=\"https://www.savebristolbay.org/\">(Link)</a><br><br>" },
             { "slide" : 2,
 	      "fn" : "phytoplankton",  
 	      "title" : "Diatoms",
@@ -635,9 +726,7 @@ var loadimage = function(imgobj) {
   desc.innerHTML = '<p><em>' + defor(imgobj.title, '') + '</em></p><br>' +
     '<p>' + defor(imgobj.year, '') + '</p>' +
 	'<p>' + defor(imgobj.medium, '') + '</p>' + 
-	'<p>' + defor(imgobj.size, '') + '<div id="description" ' + 
-    'style="white-space: normal; height: 250px; overflow-y: auto; padding: 0 8px 0 0;' + 
-    'overflow-x: hidden">' + 
+	'<p>' + defor(imgobj.size, '') + '<div class="description" id="description"' + 
     '</p><br>' +
     defor(imgobj.desc, '') + 
     '</div>' } 
