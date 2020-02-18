@@ -321,6 +321,7 @@ padding: 0 5px 0 5px;
 } 
 
 .desc { 
+white-space: normal; 
 width: 100%;
 height: ;
 order: 3;
@@ -352,6 +353,7 @@ padding: 0 10px 0 10px;
 } 
 
 .desc { 
+white-space: normal; 
 flex-shrink: 0;
 flex-grow: 0; 
 width: 30%;
@@ -469,6 +471,26 @@ margin: auto;
   border-radius: 3px 0 0 3px;
 }
 
+/* Mobile Styles */
+@media only screen and (max-width: 400px) {
+.bio {
+display: flex;
+width: 100%;
+}
+
+.biotext {
+background: #00000080;
+padding: 12px;
+width: 100%;
+height: 100%;
+overflow-x: hidden;
+overflow-y: scroll;
+white-space: normal;
+margin: 6px;
+} }
+
+/* Desktop Styles */
+@media only screen and (min-width: 401px) {
 .bio {
 display: flex;
 background-image: url(wading.jpg);
@@ -480,14 +502,14 @@ justify-content: flex-end;
 .biotext {
 background: #00000080;
 padding: 12px;
-width: 350px;
-height: 180px;
+width: 390px;
+height: 240px;
 overflow-x: hidden;
 overflow-y: scroll;
 white-space: normal;
 margin-top: 20px;
 margin-right: 20px;
-}
+} }
 
 input[type=text], select, textarea {
   width: 100%;
@@ -684,7 +706,15 @@ var site = {
 	      "size" : "18\" x 24\"" },
 ] } } },
     "illustration" : {
-      "gallery": [
+      "gallery": [ 
+	    { "fn" : "hw",
+	      "title" : "Fairbanks Heart Walk T-Shirt Design",
+	      "year" : "2019",
+	      },
+	    { "fn" : "twinflower",
+	      "title" : "Twin Flower Herb Logo",
+	      "year" : "2019",
+	      },
           {   "slide" : 1,
 	      "fn" : "say",
 	      "title" : "Negation",
@@ -823,7 +853,7 @@ var photo = '<div class=\"phorow\" id=\"phorow\"><div class=\"phocol\" id=\"phoc
 
 
 /*About page*/
-var bio = '<div class=\"bio\" id=\"bio\"><img src=\'\'><div class=\"biotext\"<p>Gaea Cherissa Dukelow is an artist/ecologist, living, working, painting, exploring, and reflecting in Fairbanks, Alaska. At odd hours of the night, she can be found haunting a small studio space in the back hallway of Well Street Art Company. Having studied art at the Maryland Institute College of Art in Baltimore, MD and forest ecology at SUNY College of Environmental Science and Forestry in Syracuse, New York, she manifests a view of the world that mixes intuition, ritual, and myth-making with critical analysis and fact-finding. Inspired both by the infinite beauty of the natural world and the mourning of its destruction, she grapples with the cognitive dissonance left behind in the wake of this strange, modern world, memorializing this sensation with the vividness of traditional painting media. </p></div></div>';
+var bio = '<div class=\"bio\" id=\"bio\"><img src=\'\'><div class=\"biotext\"<p>Gaea Cherissa Dukelow is an artist/ecologist, living, working, painting, exploring, and reflecting in Fairbanks, Alaska. At odd hours of the night, she can be found haunting a small studio space in the back hallway of Well Street Art Company. Having studied art at the Maryland Institute College of Art in Baltimore, MD and forest ecology at SUNY College of Environmental Science and Forestry in Syracuse, New York, she manifests a view of the world that mixes intuition, ritual, and myth-making with critical analysis and fact-finding. Inspired both by the infinite beauty of the natural world and the mourning of its destruction, she grapples with the cognitive dissonance left behind in the wake of this strange, modern world, memorializing this sensation with the vividness of traditional painting media. </p><br><p><a href=\"GCherissaDukelow--CV.pdf" downdload>>>  CV  </a></p></div>';
 
 /*Contact page*/
 var contactform = '<div class=\"contactform-container\" id=\"contactform\"><p><em>Send me messages:</em></p><br><form action=\"https://formspree.io/mgekdezk\" method="POST"><label>Name</label><input type=\"text\" id=\"name\" name=\"name\" placeholder=\"Your name..\"><label>Email Address</label><input type=\"text\" id=\"email\" name=\"_replyto\" placeholder=\"Your email address..\"><label>Subject</label><input type=\"text\" id=\"subject\" name=\"subject\" placeholder=\"Subject..\"><label>Message</label><textarea id=\"message\" name=\"message\" placeholder=\"Write something..\" style=\"height:200px\"></textarea><input type=\"submit\" value=\"Submit\"></form></div>';
