@@ -222,9 +222,6 @@ border: 1px solid black;
 }
 }
 
-
-
-
 /* Mobile Styles */
 @media only screen and (max-width: 400px) {
 .container {
@@ -307,7 +304,6 @@ padding: 0 10px 5px  0;
 /* Mobile Styles */
 @media only screen and (max-width: 400px) {
 .main {
-display: flex;
 order: 2;
 justify-content: center;
 align-self: center;
@@ -758,7 +754,7 @@ var loadimage = function(imgobj) {
   var main = document.getElementById('main') ;
   var desc = document.getElementById('desc') ;
 
-  main.innerHTML = '<img id="imain" src="images/' + imgobj.fn + '.jpg" />' + '<div id="myModal" class="modal">' ;		//from lightbox 
+  main.innerHTML = '<img id="imain" src="images/' + imgobj.fn + '.jpg" />' /*+ '<div id="myModal" class="modal">'*/ ;		//from lightbox 
   desc.innerHTML = '<p><em>' + defor(imgobj.title, '') + '</em></p><br>' +
     '<p>' + defor(imgobj.year, '') + '</p>' +
 	'<p>' + defor(imgobj.medium, '') + '</p>' + 
