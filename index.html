@@ -760,18 +760,15 @@ var site = {
 	      "title" : "Twin Flower Herb Logo",
 	      "year" : "2019",
 	      },
-          {   "slide" : 1,
-	      "fn" : "say",
+          {   "fn" : "say",
 	      "title" : "Negation",
 	      "year" : "2017",
 	      "desc" : "<br><p>Published in:</p><br><p><a href=\"https://www.buzzfeed.com/tomchivers/the-periphrastic-spree\">Buzzfeed</a></p><p><a href=\"https://www.theguardian.com/science/2017/nov/01/resistance-to-changes-in-grammar-is-futile-say-researchers\">The Guardian</a><br><br><p>This illustration was created to accompany a press release for a paper titled, \"Detecting evolutionary forces in language change\", published in the scientific journal, Nature in 2017. The illustration depicts the history of forms of negation in the English language over time, represented by characters from notorious pieces of literature (from left to right, \“Ic ne secge\” (Beowulf, c. 900) to \“Ic ne sege noht\” (the Ormulum, c. 1100) to \“I seye not\” (Chaucer, c. 1400) to \“I doe not say\” (Shakespeare, c. 1600) before returning to the familiar \“I don’t say\” (Virginia Woolf, c. 1900).</p>" },
-	   {  "slide" : 2,
-	      "fn" : "Qlogo",
+	   { "fn" : "Qlogo",
 	      "title" : "Logo for Quadirah",
 	      "year" : "2017",
 	      "desc" : "Quadirah's etsy shop: <br><a href=\"https://www.etsy.com/shop/QDee\">https://www.etsy.com/shop/QDee</a>" },
- 	   {  "slide" : 3,
-	      "fn" : "openhand",
+ 	   {  "fn" : "openhand",
 	      "title" : "Logo for Open Hand",
 	      "year" : "2017",
 	      "desc" : "<p><a href=\"https://openhandband.weebly.com/\">https://openhandband.weebly.com/</a></p>" },
@@ -799,7 +796,10 @@ var loadimage = function(imgobj) {
   var main = document.getElementById('main') ;
   var desc = document.getElementById('desc') ;
 
-  main.innerHTML = '<img id="imain" src="images/' + imgobj.fn + '.jpg" />' /*+ '<div id="myModal" class="modal">'*/ ;		//from lightbox 
+  main.innerHTML = '<img id="imain" ' + 
+     // the onclick handler is for lightbox:
+    'onclick="openModal();currentSlide(' + (imgobj.slideindex + 1) + ')"' + 
+    ' src="images/' + imgobj.fn + '.jpg" />' 
   desc.innerHTML = '<p><em>' + defor(imgobj.title, '') + '</em></p><br>' +
     '<p>' + defor(imgobj.year, '') + '</p>' +
 	'<p>' + defor(imgobj.medium, '') + '</p>' + 
@@ -812,39 +812,39 @@ var loadimage = function(imgobj) {
 /* This creates the "gallery" object. */
 var loadgallery = function(galobj) {
   var div = document.getElementById('container3') ;
-  div.innerHTML = '<div class="thumbs" id="thumbs"></div>' + 
-    '<div class="main" id="main"></div>' + '<aside class="desc" id="desc"></aside>' ;
+  var ih = '<div class="thumbs" id="thumbs"></div>' + 
+    '<div class="main" id="main"></div>' + '<aside class="desc" id="desc"></aside>' +
+    // For lightbox:
+    '<div id="myModal" class="modal">' + 
+    '<span class="close cursor" onclick="closeModal()">&times;</span>' +
+    '<div class="modal-content">' ;
+  // lightbox images (with titles, years):
+  for (i in galobj.gallery) {
+    ih = ih + '<div class="mySlides" style="text-align:center"><img src="images/' + 
+      galobj.gallery[i].fn + '.jpg"><br /><em>' +
+      galobj.gallery[i].title + '</em>' + ", " +
+      galobj.gallery[i].year + 
+      '<br><br><p>' +
+      '</div>' }
+  ih = ih + '<a class="prev" onclick="plusSlides(-1)">&#10094;</a>' + 
+    '<a class="next" onclick="plusSlides(1)">&#10095;</a>' +
+    '</div></div>' ;
+
+  div.innerHTML = ih
   var thumbs = document.getElementById('thumbs') ;
 
 /* This sets up the thumbnail image gallery and adds event handlers */
-  ih = "" ;		
-  for (i in galobj.gallery) {		
+  for (i in galobj.gallery) {
     var painting = galobj.gallery[i] ;
+    painting.slideindex = Math.floor(i) // <- for lightbox *floor makes this an integer
     var img = document.createElement("img") ;		
     img.setAttribute("src", "images/" + painting.fn + "_thumb.jpg") ;		
     img.addEventListener("click", function () {
-    loadimage(this) }.bind(painting), false) ;   //TO DO .bind is deprecated, need to change to on
+      loadimage(this) }.bind(painting), false) ;  // bind is element of a function, sets 'this' to 'painting'
     thumbs.appendChild(img) ; }
 
   loadimage(galobj.gallery[0]) ;
-/* document.getElementById("imain").addEventListener("click",  function(a){ 
-	openModal(); 
-	
-	/*document.getElementById("myModal").innerHTML = '<span class="close cursor" onclick="closeModal()">&times;</span><div class="modal-content"><div class="mySlides"><img id="img01"></div><a class="prev" onclick="plusSlides(-1)">&#10094;</a><a class="next" onclick="plusSlides(1)">&#10095;</a></div>' ;
-	
-		
-	//for (s in galobj.gallery) ; 
-	//var isrc = 'document.getElementById(\"img01\").src' ;
-	//var islide = painting.slide ;
-	currentSlide( a ) ;
-
-	//var pslides = site.nav.paintings.nav[
-	//var galslides = .gallery.slide[s];
-	//displayedSlide(galslides);
-//Object.keys(gallery.slide)
-
-	}); */	 } 
-
+} 
 
 /*modal pop-up*/
 function openModal() {
