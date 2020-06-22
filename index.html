@@ -640,11 +640,18 @@ padding-bottom: 0px;
 }
 
 .center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  }
+display: block;
+margin-left: auto;
+margin-right: auto;
+}
 
+.center-div
+{
+display: flex;
+justify-content: center;
+margin: 0 auto;
+width: 100%; 
+}
 
 </style>
 <script language="Javascript" type="text/javascript">
@@ -965,9 +972,9 @@ var community ='<div>tst</div>';
 var bio = '<div class=\"bio\" id=\"bio\"><img src=\'\'><div class=\"biotext\"<p>Gaea Cherissa Dukelow is an artist/ecologist currently based in Fairbanks, Alaska. She is a granddaughter of midwestern agriculture, but raised at the edge of a gradient of eastern suburban sprawl and deciduous forest. After drifting into the charmingly gritty, beautiful complexity of Philadelphia for several years, she gathered up a satchel of pent-up wanderlust and exported herself to the vast, last frontier, the Golden Heart City, Fairbanks, Alaska. There, she collects ecological data by occuption, and occupies a studio at Well Street Art Company. </p><br><p>Having studied art at the Maryland Institute College of Art in Baltimore, MD and forest ecology at SUNY College of Environmental Science and Forestry in Syracuse, New York, she manifests a view of the world that mixes intuition and myth-making with critical analysis and reflection. Inspired both by the infinite beauty of the natural world and the mourning of its destruction, she grapples with the cognitive dissonance left behind in the wake of this strange, modern world, memorializing this sensation with the vividness of traditional painting media. </p><br><p><a href=\"GCherissaDukelow--CV.pdf" download>>>  CV  </a></p></div>';
 
 /*News page*/
-var news = '<div class=\"news\"><div class=\"newstext"\"><h4><u>June 8, 2020</u></h4><br><p>Today I participated in the Tanana Valley Watershed Association\'s Storm Drain Art Day in downtown Fairbanks on 3rd Avenue next to the post office, and painted my design they selected to be included -- a beaver swimming with a branch in its mouth toward the storm drain.</p><br> <img src=\"beaverphotos/prog1.jpg\" height=\"250px\" class=\"center\"></p> <br><p><a href=\"http://www.tvwatershed.org/\">http://www.tvwatershed.org/</a></p><br><p><h4><u>June 5, 2020</u></h4><br>For June 2020 first friday, my work was included in a group show for the grand opening show of Tamara Wilson\'s Lemonade Stand. The show was titled, <i>13+</i>, and included one piece of work from 13 artists of various styles. It as so exciting to see Tamara\'s amazing mobile galley, an artwork in itseslf and a labor of love.</p><br><img src=\"lemonadestand/wall.jpg\" height=\"250px\" class=\"center\"></p> <br><p><a href=\"https://www.instagram.com/lemonadester/\">https://www.instagram.com/lemonadester/</a></p><p><a href=\"www.lemonadester.com\">www.lemonadester.com</a></p><br><p><h4><u>June 4, 2020</u></h4><br><p>I have been kindly selected by the Northern Alaska Environmental Center as their Featured Artist of 2020! They are commissioning work from me similar to my previous \'Earthscapes\' painting series that will be of locations they choose to go along with their work fighting aginst oil drilling and mining projects in Alasksa wilderness areas: Teshekpuk Lake, the Arctic National Wildlife Refuge, and the Brooks Range. They will feature my art in their graphic materials, and we will put together a show of our work this fall. Thankful for this opportunity!</p><br><a href=\"https://northern.org/\">https://northern.org/</a></p><br><br><br></div>';
+var news = '<div class=\"news\"><div class=\"newstext"\"><h4><u>June 8, 2020</u></h4><br><p>Today I participated in the Tanana Valley Watershed Association\'s Storm Drain Art Day in downtown Fairbanks on 3rd Avenue next to the post office, and painted my design they selected to be included -- a beaver swimming with a branch in its mouth toward the storm drain.</p><br> <div class=\"center-div"><img src=\"beaverphotos/prog1.jpg\" height=\"250px\" style=\"padding: 6px"><img src=\"beaverphotos/close.jpg\" height=\"250px\" style=\"padding: 6px" ></div></p> <br><p><a href=\"http://www.tvwatershed.org/\">http://www.tvwatershed.org/</a></p><br><p><h4><u>June 5, 2020</u></h4><br>For June 2020 first friday, my work was included in a group show for the grand opening show of Tamara Wilson\'s Lemonade Stand. The show was titled, <i>13+</i>, and included one piece of work from 13 artists of various styles. It as so exciting to see Tamara\'s amazing mobile galley, an artwork in itseslf and a labor of love.</p><br><img src=\"lemonadestand/wall.jpg\" height=\"250px\" class=\"center\"></p> <br><p><a href=\"https://www.instagram.com/lemonadester/\">https://www.instagram.com/lemonadester/</a></p><p><a href=\"www.lemonadester.com\">www.lemonadester.com</a></p><br><p><h4><u>June 4, 2020</u></h4><br><p>I have been kindly selected by the Northern Alaska Environmental Center as their Featured Artist of 2020! They are commissioning work from me similar to my previous \'Earthscapes\' painting series that will be of locations they choose to go along with their work fighting aginst oil drilling and mining projects in Alasksa wilderness areas: Teshekpuk Lake, the Arctic National Wildlife Refuge, and the Brooks Range. They will feature my art in their graphic materials, and we will put together a show of our work this fall. Thankful for this opportunity!</p><br><a href=\"https://northern.org/\">https://northern.org/</a></p><br><br><br></div>';
 
-//<br><p>More photos <a href=\'\'>here</a>.</p
+//<br><p>More photos <a href=\'\'>here</a>.</p>
 
 /*Contact page*/
 var contactform = '<div class=\"contactform-container\" id=\"contactform\"><p><em>Send me a message, or request to receive (very occasional) news:</em></p><br><form action=\"https://formspree.io/mgekdezk\" method="POST"><label>Name</label><input type=\"text\" id=\"name\" name=\"name\" placeholder=\"Your name..\"><label>Email Address</label><input type=\"text\" id=\"email\" name=\"_replyto\" placeholder=\"Your email address..\"><label>Subject</label><input type=\"text\" id=\"subject\" name=\"subject\" placeholder=\"Subject..\"><label>Message</label><textarea id=\"message\" name=\"message\" placeholder=\"Write something..\" style=\"height:200px\"></textarea><input type=\"submit\" value=\"Submit\"></form></div>';
