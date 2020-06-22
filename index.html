@@ -512,6 +512,48 @@ margin-top: 20px;
 margin-right: 20px;
 } }
 
+/* Mobile Styles */
+@media only screen and (max-width: 400px) {
+.news {
+display: flex;
+width: 100%;
+}
+
+.newstext {
+background: #000000;
+padding: 12px;
+width: 100%;
+height: 100%;
+overflow-x: hidden;
+overflow-y: scroll;
+white-space: normal;
+margin: 6px;
+} }
+
+/* Desktop Styles */
+@media only screen and (min-width: 401px) {
+.news {
+display: flex;
+background-image: url(figuresketch.jpg);
+background-size: contain;
+background-repeat: no-repeat;
+width: 100%;
+height: auto;
+background-position: right bottom; 
+}
+
+.newstext {
+background: #00000080;
+padding: 12px;
+width: 100%;
+
+overflow-x: hidden;
+overflow-y: scroll;
+white-space: normal;
+margin-top: 20px;
+margin-right: 20px;
+} }
+
 input[type=text], select, textarea {
   width: 100%;
   padding: 12px;
@@ -596,6 +638,12 @@ padding-bottom: 0px;
 
 .send { order: 2;}
 }
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  }
 
 
 </style>
@@ -786,7 +834,9 @@ var site = {
 	      "desc" : "<p><a href=\"https://openhandband.weebly.com/\">https://openhandband.weebly.com/</a></p>" },
  ] },
     "photographs" : {},
+   // "community" : {},
     "about" : {},
+    "news" : {},
     "contact" : {} } }
 
 /* translate between spaces and dashes in navigation headings */
@@ -908,9 +958,16 @@ mi.addEventListener("click", function(){ alert("Hello World!"); }); */
 
 var photo = '<div class=\"phorow\" id=\"phorow\"><div class=\"phocol\" id=\"phocol\"><img class=\"photog\" src=\"photographs/thumbs/001.jpg\" onclick="openModal();currentSlide(1)"><img class=\"photog\" src=\"photographs/thumbs/004.jpg\" onclick="openModal();currentSlide(4)"><img class=\"photog\" src=\"photographs/thumbs/007.jpg\" onclick="openModal();currentSlide(7)"><img class=\"photog\" src=\"photographs/thumbs/010.jpg\" onclick="openModal();currentSlide(10)"><img class=\"photog\" src=\"photographs/thumbs/013.jpg\" onclick="openModal();currentSlide(13)"><img class=\"photog\" src=\"photographs/thumbs/016.jpg\" onclick="openModal();currentSlide(16)"><img class=\"photog\" src=\"photographs/thumbs/019.jpg\" onclick="openModal();currentSlide(19)"><img class=\"photog\" src=\"photographs/thumbs/022.jpg\" onclick="openModal();currentSlide(22)"><img class=\"photog\" src=\"photographs/thumbs/025.jpg\" onclick="openModal();currentSlide(25)"><img class=\"photog\" src=\"photographs/thumbs/026.jpg\" onclick="openModal();currentSlide(26)"></div><div class=\"phocol\" id=\"phocol\"><img class=\"photog\" src=\"photographs/thumbs/002.jpg\" onclick="openModal();currentSlide(2)"><img class=\"photog\" src=\"photographs/thumbs/005.jpg\" onclick="openModal();currentSlide(5)"><img class=\"photog\" src=\"photographs/thumbs/008.jpg\" onclick="openModal();currentSlide(8)"><img class=\"photog\" src=\"photographs/thumbs/011.jpg\" onclick="openModal();currentSlide(11)"><img class=\"photog\" src=\"photographs/thumbs/014.jpg\" onclick="openModal();currentSlide(14)"><img class=\"photog\" src=\"photographs/thumbs/017.jpg\" onclick="openModal();currentSlide(17)"><img class=\"photog\" src=\"photographs/thumbs/023.jpg\" onclick="openModal();currentSlide(23)"></div><div class=\"phocol\" id=\"phocol\"><img class=\"photog\" src=\"photographs/thumbs/003.jpg\" onclick="openModal();currentSlide(3)"><img class=\"photog\" src=\"photographs/thumbs/006.jpg\" onclick="openModal();currentSlide(6)"><img class=\"photog\" src=\"photographs/thumbs/009.jpg\" onclick="openModal();currentSlide(9)"><img class=\"photog\" src=\"photographs/thumbs/012.jpg\" onclick="openModal();currentSlide(12)"><img class=\"photog\" src=\"photographs/thumbs/015.jpg\" onclick="openModal();currentSlide(15)"><img class=\"photog\" src=\"photographs/thumbs/018.jpg\" onclick="openModal();currentSlide(18)"><img class=\"photog\" src=\"photographs/thumbs/021.jpg\" onclick="openModal();currentSlide(21)"><img class=\"photog\" src=\"photographs/thumbs/024.jpg\" onclick="openModal();currentSlide(24)"><img class=\"photog\" src=\"photographs/thumbs/027.jpg\" onclick="openModal();currentSlide(27)"><img class=\"photog\" src=\"photographs/thumbs/020.jpg\" onclick="openModal();currentSlide(20)"></div></div><div id="myModal" class="modal"><span class="close cursor" onclick="closeModal()">&times;</span><div class="modal-content"><div class="mySlides"><img src=\"photographs/001.jpg\"></div><div class="mySlides"><img src=\"photographs/002.jpg\"></div><div class="mySlides"><img src=\"photographs/003.jpg\"></div><div class="mySlides"><img src=\"photographs/004.jpg\"></div><div class="mySlides"><img src=\"photographs/005.jpg\"></div><div class="mySlides"><img src=\"photographs/006.jpg\"></div><div class="mySlides"><img src=\"photographs/007.jpg\"></div><div class="mySlides"><img src=\"photographs/008.jpg\"></div><div class="mySlides"><img src=\"photographs/009.jpg\"></div><div class="mySlides"><img src=\"photographs/010.jpg\"></div><div class="mySlides"><img src=\"photographs/011.jpg\"></div><div class="mySlides"><img src=\"photographs/012.jpg\"></div><div class="mySlides"><img src=\"photographs/013.jpg\"></div><div class="mySlides"><img src=\"photographs/014.jpg\"></div><div class="mySlides"><img src=\"photographs/015.jpg\"></div><div class="mySlides"><img src=\"photographs/016.jpg\"></div><div class="mySlides"><img src=\"photographs/017.jpg\"></div><div class="mySlides"><img src=\"photographs/018.jpg\"></div><div class="mySlides"><img src=\"photographs/019.jpg\"></div><div class="mySlides"><img src=\"photographs/020.jpg\"></div><div class="mySlides"><img src=\"photographs/021.jpg\"></div><div class="mySlides"><img src=\"photographs/022.jpg\"></div><div class="mySlides"><img src=\"photographs/023.jpg\"></div><div class="mySlides"><img src=\"photographs/024.jpg\"></div><div class="mySlides"><img src=\"photographs/025.jpg\"></div><div class="mySlides"><img src=\"photographs/026.jpg\"></div><div class="mySlides"><img src=\"photographs/027.jpg\"></div> <a class="prev" onclick="plusSlides(-1)">&#10094;</a><a class="next" onclick="plusSlides(1)">&#10095;</a>';
 
+/*Community Art page*/
+var community ='<div>tst</div>';
 
 /*About page*/
-var bio = '<div class=\"bio\" id=\"bio\"><img src=\'\'><div class=\"biotext\"<p>Gaea Cherissa Dukelow is an artist/ecologist. Granddaughter of agriculture, raised at the edge of a gradient of suburban sprawl to forest and field, then drifted into the charmingly gritty, beautiful complexity of Philadelphia, then exported to the vast, last frontier, the Golden Heart City, Fairbanks, Alaska. At odd hours of the night, she can be found haunting a small studio space in the back hallway of Well Street Art Company. </p><br><p>Having studied art at the Maryland Institute College of Art in Baltimore, MD and forest ecology at SUNY College of Environmental Science and Forestry in Syracuse, New York, she manifests a view of the world that mixes intuition and myth-making with critical analysis and reflection. Inspired both by the infinite beauty of the natural world and the mourning of its destruction, she grapples with the cognitive dissonance left behind in the wake of this strange, modern world, memorializing this sensation with the vividness of traditional painting media. </p><br><p><a href=\"GCherissaDukelow--CV.pdf" download>>>  CV  </a></p></div>';
+var bio = '<div class=\"bio\" id=\"bio\"><img src=\'\'><div class=\"biotext\"<p>Gaea Cherissa Dukelow is an artist/ecologist currently based in Fairbanks, Alaska. She is a granddaughter of midwestern agriculture, but raised at the edge of a gradient of eastern suburban sprawl and deciduous forest. After drifting into the charmingly gritty, beautiful complexity of Philadelphia for several years, she gathered up a satchel of pent-up wanderlust and exported herself to the vast, last frontier, the Golden Heart City, Fairbanks, Alaska. There, she collects ecological data by occuption, and occupies a studio at Well Street Art Company. </p><br><p>Having studied art at the Maryland Institute College of Art in Baltimore, MD and forest ecology at SUNY College of Environmental Science and Forestry in Syracuse, New York, she manifests a view of the world that mixes intuition and myth-making with critical analysis and reflection. Inspired both by the infinite beauty of the natural world and the mourning of its destruction, she grapples with the cognitive dissonance left behind in the wake of this strange, modern world, memorializing this sensation with the vividness of traditional painting media. </p><br><p><a href=\"GCherissaDukelow--CV.pdf" download>>>  CV  </a></p></div>';
+
+/*News page*/
+var news = '<div class=\"news\"><div class=\"newstext"\"><h4><u>June 8, 2020</u></h4><br><p>Today I participated in the Tanana Valley Watershed Association\'s Storm Drain Art Day in downtown Fairbanks on 3rd Avenue next to the post office, and painted my design they selected to be included -- a beaver swimming with a branch in its mouth toward the storm drain.</p><br> <img src=\"beaverphotos/prog1.jpg\" height=\"250px\" class=\"center\"></p> <br><p><a href=\"http://www.tvwatershed.org/\">http://www.tvwatershed.org/</a></p><br><p><h4><u>June 5, 2020</u></h4><br>For June 2020 first friday, my work was included in a group show for the grand opening show of Tamara Wilson\'s Lemonade Stand. The show was titled, <i>13+</i>, and included one piece of work from 13 artists of various styles. It as so exciting to see Tamara\'s amazing mobile galley, an artwork in itseslf and a labor of love.</p><br><img src=\"lemonadestand/wall.jpg\" height=\"250px\" class=\"center\"></p> <br><p><a href=\"https://www.instagram.com/lemonadester/\">https://www.instagram.com/lemonadester/</a></p><p><a href=\"www.lemonadester.com\">www.lemonadester.com</a></p><br><p><h4><u>June 4, 2020</u></h4><br><p>I have been kindly selected by the Northern Alaska Environmental Center as their Featured Artist of 2020! They are commissioning work from me similar to my previous \'Earthscapes\' painting series that will be of locations they choose to go along with their work fighting aginst oil drilling and mining projects in Alasksa wilderness areas: Teshekpuk Lake, the Arctic National Wildlife Refuge, and the Brooks Range. They will feature my art in their graphic materials, and we will put together a show of our work this fall. Thankful for this opportunity!</p><br><a href=\"https://northern.org/\">https://northern.org/</a></p><br><br><br></div>';
+
+//<br><p>More photos <a href=\'\'>here</a>.</p
 
 /*Contact page*/
 var contactform = '<div class=\"contactform-container\" id=\"contactform\"><p><em>Send me a message, or request to receive (very occasional) news:</em></p><br><form action=\"https://formspree.io/mgekdezk\" method="POST"><label>Name</label><input type=\"text\" id=\"name\" name=\"name\" placeholder=\"Your name..\"><label>Email Address</label><input type=\"text\" id=\"email\" name=\"_replyto\" placeholder=\"Your email address..\"><label>Subject</label><input type=\"text\" id=\"subject\" name=\"subject\" placeholder=\"Subject..\"><label>Message</label><textarea id=\"message\" name=\"message\" placeholder=\"Write something..\" style=\"height:200px\"></textarea><input type=\"submit\" value=\"Submit\"></form></div>';
@@ -952,7 +1009,9 @@ var loadfragment = function (fragarg) {
     if (frag == "paintings.figures") { loadgallery(site.nav.paintings.nav.figures) }		 
     if (frag == "illustration") { loadgallery(site.nav.illustration) }
     if (frag == "photographs") { loadseg(photo) }
+   // if (frag == "community" ) { loadseg(community) }
     if (frag == "about") { loadseg(bio) }
+    if (frag == "news") { loadseg(news) }
     if (frag == "contact") { loadseg(contactform) }		
      }		
 
