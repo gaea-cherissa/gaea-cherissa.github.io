@@ -699,7 +699,7 @@ var site = {
 	      "year" : "2020",
 	      "medium" : "Oil on canvas",
 	      "size" : "2' x 2'" ,
-	      "desc" : "<p>The Arctic National Wildlife Refuge, also known in Gwich’in as, <em>Iizhik Gwats’an Gwandaii Goodlit</em>, or, \“The Sacred Place Where Life Begins,\” and disaffectionately \“Section 1002\” has sustained human and animal life since time immemorial. The far-reaching lore of this region’s unique magic captures hearts and minds far and wide. Yet, an ongoing debate over that which lies beneath its caribou birthing grounds has ensued for decades, and is now at a crucial pinnacle.</p></br><p>This region is important habitat for 180 migratory bird species, polar bears in search of sea ice, the Porcupine caribou herd, and it is traditional land of the Gwich’in and Inupiaq people. </p></br>In 2017, the Trump administration passed the Tax Cuts and Jobs Act that included amendments to the Alaska National Interest Lands Conservation Act by Lisa Murkowski that mandated at least two lease sales in the Coastal Plain of the Arctic Refuge for oil drilling. An Environmental Impact Statement was completed in 2019. Currently, a Record of Decision is in progress for the official lease auction.</p></br><p>NEPA, the National Environmental Policy Act requires development projects on federal land– such as drilling for oil in the Refuge, the Keystone XL Pipeline, and the Dakota Access Pipeline – to undergo environmental impact assessment. NEPA also requires consideration of the disproportionate impacts to minority and low-income communities which have too often been the frontlines of environmental degradation.</p></br><p>This year, the Trump administration finalized revisions to NEPA that loosen its requirements, limits the length and time allotted for impact assessments, eliminates requirement to consider cumulative impacts and climate change, and reduces public accessibility. </p></br><p>Allowing extraction industries to get their feet in the door in this way facilitates future efforts to continue ripping up that which we hold vital and sacred without limitation. </p></br><p>This painting was one of three paintings commissioned by the <a hre=\"https://northern.org/\">Northern Alaska Environmental Center</a>.</p><br><p>More information about how to take action for the refuge here:</p?<br><p><a href=\"https://www.defendthesacredalaska.org/arctic-refuge/\">https://www.defendthesacredalaska.org/arctic-refuge/</a></p><br><p><a href=\"https://northern.org/news/arctic-refuge-action-whats-next/\">https://northern.org/news/arctic-refuge-action-whats-next/</p>" },	
+	      "desc" : "<p>The Arctic National Wildlife Refuge, also known in Gwich’in as, <em>Iizhik Gwats’an Gwandaii Goodlit</em>, or, \“The Sacred Place Where Life Begins,\” and disaffectionately \“Section 1002\” has sustained human and animal life since time immemorial. The far-reaching lore of this region’s unique magic captures hearts and minds far and wide. Yet, an ongoing debate over that which lies beneath its caribou birthing grounds has ensued for decades, and is now at a crucial pinnacle.</p></br><p>This region is important habitat for 180 migratory bird species, polar bears in search of sea ice, the Porcupine caribou herd, and it is traditional land of the Gwich’in and Inupiaq people. </p></br>In 2017, the Trump administration passed the Tax Cuts and Jobs Act that included amendments to the Alaska National Interest Lands Conservation Act by Lisa Murkowski that mandated at least two lease sales in the Coastal Plain of the Arctic Refuge for oil drilling. An Environmental Impact Statement was completed in 2019. Currently, a Record of Decision is in progress for the official lease auction.</p></br><p>NEPA, the National Environmental Policy Act requires development projects on federal land– such as drilling for oil in the Refuge, the Keystone XL Pipeline, and the Dakota Access Pipeline – to undergo environmental impact assessment. NEPA also requires consideration of the disproportionate impacts to minority and low-income communities which have too often been the frontlines of environmental degradation.</p></br><p>This year, the Trump administration finalized revisions to NEPA that loosen its requirements, limits the length and time allotted for impact assessments, eliminates requirement to consider cumulative impacts and climate change, and reduces public accessibility. </p></br><p>Allowing extraction industries to get their feet in the door in this way facilitates future efforts to continue ripping up that which we hold vital and sacred without limitation. </p></br><p>This painting was one of three paintings commissioned by the <a hre=\"https://northern.org/\">Northern Alaska Environmental Center</a> and will be up for auction to support their work in November.</p><br><p>More information about how to take action for the refuge here:</p?<br><p><a href=\"https://www.defendthesacredalaska.org/arctic-refuge/\">https://www.defendthesacredalaska.org/arctic-refuge/</a></p><br><p><a href=\"https://northern.org/news/arctic-refuge-action-whats-next/\">https://northern.org/news/arctic-refuge-action-whats-next/</p>" },	
            { "fn" : "earthcolony",
 	      "title" : "Earth Colony",
 	      "year" : "2020",
@@ -902,7 +902,8 @@ var site = {
    // "community" : {},
     "about" : {},
     "news" : {},
-    "contact" : {} } }
+    "contact" : {},
+    "shop" : {} } }
 
 /* translate between spaces and dashes in navigation headings */
 var fragify = function (str) {
@@ -1035,7 +1036,8 @@ var news = '<div class=\"news\"><div class=\"newstext"\">   <h4><u>September 15,
 //<br><p>More photos <a href=\'\'>here</a>.</p>
 
 /*Contact page*/
-var contactform = '<div class=\"contactform-container\" id=\"contactform\"><p><em>Send me a message, or request to receive (very occasional) news:</em></p><br><form action=\"https://formspree.io/mgekdezk\" method="POST"><label>Name</label><input type=\"text\" id=\"name\" name=\"name\" placeholder=\"Your name..\"><label>Email Address</label><input type=\"text\" id=\"email\" name=\"_replyto\" placeholder=\"Your email address..\"><label>Subject</label><input type=\"text\" id=\"subject\" name=\"subject\" placeholder=\"Subject..\"><label>Message</label><textarea id=\"message\" name=\"message\" placeholder=\"Write something..\" style=\"height:200px\"></textarea><input type=\"submit\" value=\"Submit\"></form></div>';
+var contactform = '<div class=\"contactform-container\" id=\"contactform\"><p><em>Send me a message, ask about buying originals, commissions, or request to receive (very occasional) news:</em></p><br><form action=\"https://formspree.io/mgekdezk\" method="POST"><label>Name</label><input type=\"text\" id=\"name\" name=\"name\" placeholder=\"Your name..\"><label>Email Address</label><input type=\"text\" id=\"email\" name=\"_replyto\" placeholder=\"Your email address..\"><label>Subject</label><input type=\"text\" id=\"subject\" name=\"subject\" placeholder=\"Subject..\"><label>Message</label><textarea id=\"message\" name=\"message\" placeholder=\"Write something..\" style=\"height:200px\"></textarea><input type=\"submit\" value=\"Submit\"></form></div>';
+
 
 
 /* the hash.substring is the "fragment identifier" (see wikipedia, excerpt below). By loading
@@ -1077,7 +1079,8 @@ var loadfragment = function (fragarg) {
    // if (frag == "community" ) { loadseg(community) }
     if (frag == "about") { loadseg(bio) }
     if (frag == "news") { loadseg(news) }
-    if (frag == "contact") { loadseg(contactform) }		
+    if (frag == "contact") { loadseg(contactform) }	
+    if (frag == "shop") { open("https://www.inprnt.com/gallery/gaea-cherissa/") }		
      }		
 
 
