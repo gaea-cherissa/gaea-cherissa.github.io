@@ -4,146 +4,499 @@
     <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8"/>
- 
-<style type="text/css" media="screen">
+    <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville&display=swap" rel="stylesheet">
 
-body {
-font-family: Courier, monospace;
-color: white;
-white-space: normal;
-overflow-x: hidden;
+    <title>gaea cherissa | art</title>
+
+<link rel="stylesheet" type="text/css" href="style.css" media="screen">
+<script language="Javascript" type="text/javascript">
+
+/* To build out the content of the site, look in the javascript (right after the css in the file) and the first thing you will see is a giant "object" called site. You can sort of imagine how it works. { "key" : "value" } in javascript means an object, which is a list of key-value pairs. [ {...}, {...}, ... ] means an array of objects. So for example the global "nav" is an object which contains "paintings", "illustration", et c. Meanwhile "paintings" is an object with its own nav, which is your submenu of earthscapes, dystopic present, et c. See wikipedia for JSON for more info on the syntax here. Some of those pages have a "gallery", which is an array of objects, each one has a "fn" (filename, but without the .jpg or _thumb.jpg), title, year, medium, size, and "desc". desc is a big blob of whatever HTML you want to use to describe it. You can see that teshekpuk has all these attributes defined but iliamna only has some, so only part of the description shows up for iliamna when you click on it. The rest have nothing defined so nothing shows up in the description area. You can fill in more descriptions and filenames to put content into the site. */
+
+/* Here we specify the overall structure of the page in JSON */
+/* This is how we edit the site. The javascript will generate the HTML */
+var site = {
+  "nav" : {
+    "paintings" : {
+      "nav" : {
+        "earthscapes" : {
+          "gallery": [
+          { "fn" : "ANWR",
+	      "title" : "Refuge",
+	      "year" : "2020",
+	      "medium" : "Oil on canvas",
+	      "size" : "2' x 2'" ,
+	      "desc" : "<p>The Arctic National Wildlife Refuge, also known in Gwich’in as, <em>Iizhik Gwats’an Gwandaii Goodlit</em>, or, \“The Sacred Place Where Life Begins,\” and disaffectionately \“Section 1002\” has sustained human and animal life since time immemorial. The far-reaching lore of this region’s unique magic captures hearts and minds far and wide. Yet, an ongoing debate over that which lies beneath its caribou birthing grounds has ensued for decades, and is now at a crucial pinnacle.</p></br><p>This region is important habitat for 180 migratory bird species, polar bears in search of sea ice, the Porcupine caribou herd, and it is traditional land of the Gwich’in and Inupiaq people. </p></br>In 2017, the Trump administration passed the Tax Cuts and Jobs Act that included amendments to the Alaska National Interest Lands Conservation Act by Lisa Murkowski that mandated at least two lease sales in the Coastal Plain of the Arctic Refuge for oil drilling. An Environmental Impact Statement was completed in 2019. Currently, a Record of Decision is in progress for the official lease auction.</p></br><p>NEPA, the National Environmental Policy Act requires development projects on federal land– such as drilling for oil in the Refuge, the Keystone XL Pipeline, and the Dakota Access Pipeline – to undergo environmental impact assessment. NEPA also requires consideration of the disproportionate impacts to minority and low-income communities which have too often been the frontlines of environmental degradation.</p></br><p>This year, the Trump administration finalized revisions to NEPA that loosen its requirements, limits the length and time allotted for impact assessments, eliminates requirement to consider cumulative impacts and climate change, and reduces public accessibility. </p></br><p>Allowing extraction industries to get their feet in the door in this way facilitates future efforts to continue ripping up that which we hold vital and sacred without limitation. </p></br><p>This painting was one of three paintings commissioned by the <a hre=\"https://northern.org/\">Northern Alaska Environmental Center</a> and will be up for auction to support their work in November.</p><br><p>More information about how to take action for the refuge here:</p?<br><p><a href=\"https://www.defendthesacredalaska.org/arctic-refuge/\">https://www.defendthesacredalaska.org/arctic-refuge/</a></p><br><p><a href=\"https://northern.org/news/arctic-refuge-action-whats-next/\">https://northern.org/news/arctic-refuge-action-whats-next/</p>" },
+           { "fn" : "earthcolony",
+	      "title" : "Earth Colony",
+	      "year" : "2020",
+	      "medium" : "Acrylic on canvas",
+	      "size" : "12\" x 12\"",
+	       "desc" : "This painting offers the viewer a window to Alaska's North Slope, a distant and extreme region so central to much of the modern-day existence of an urbanized, motorized Alaska and beyond. Here, this piece frames a small section of the Prudhoe Bay Oil Field, just east of the Kuparuk River. Piping, powerlines, roads, buildings, well houses, and pump stations snake across and colonize this otherwordly thermokarst landscape like science fiction. Heated by these structures as well as a warming climate, the permafrost landscape in this area becomes increasingly speckled with lakes as the permanently frozen subsurface melts.</p><br><br>This piece was featured in a group exhibition, <i>13+</i>, hosted by <a href=\"https://www.instagram.com/lemonadester/\">The Lemonade Stand</a> June 2020." },
+	    { "fn" : "mackenzie",
+	      "title" : "Deh Cho",
+	      "year" : "2020",
+	      "medium" : "Oil on canvas",
+	      "size" : "2' x 2'" ,
+	      "desc" : "Deh Cho, AKA Kuukpak, AKA the Mackenzie River is the second longest river in North America. This great river flows northwest across a great expanse of frozen taiga and tundra, and discharges an incredible amount of freshwater into the Beaufort Sea - the Arctic Ocean - particularly in early summer as large amounts of snow and ice melt and drain into the watershed. The warm, fresh, river water and sediment swirl into the Beaufort Sea and stir and break up the sea ice. This water entering the Arctic Ocean from the Mackenzie River contributes largely to the regulation of ocean circulation and extent of sea-ice cover." },
+            { "slide" : 0,
+	      "fn": "teshekpuk",
+              "title" : "Teshekpuk",
+              "year" : "2019",
+              "medium" : "Oil on canvas",
+              "size" : "2' x 2'",
+              "desc" : "<p>Teshekpuk Lake is the world’s largest thermokarst lake in Alaska’s North Slope region, currently being considered for development for oil and gas by ConocoPhilips. Teshekpuk Lake is a critical habitat for migratory waterfowl, the Teshekpuk Caribou Herd, and other wildlife and a sacred place for Iñupiat Peoples. In 2019, the Native Village of Nuiqsut and several environmental advocacy organizations sued the federal government over the decision to allow oil-drilling in this special place. The Bureau of Land Management is currently in the process of drafting a master plan and environmental impact statement for this development project.</p><br><br><a href=\"https://www.defendthesacredalaska.org/protect-teshekpuk/\">www.defendthesacredalaska.org</a><br><br> This painting was published in an article titled, <a href=\"http://theconversation.com/mathematics-of-scale-big-small-and-everything-in-between-115890\">\"Mathematics of scale: Big, small and everything in between\"</a> on The Conversation May 2019." },
+	    { "fn" : "forests",
+	      "title" : "Board Feet",
+	      "year" : "2020",
+	      "medium" : "Oil on canvas",
+	      "size" : "2' x 2'",
+	      "desc" : "Since Europeans arrived and began to colonize North America, forests have been cleared to make way for settlement, agriculture, logging and other resource extraction. A wave of deforestation and forest degradation spread westward with their expansion. On the east coast, grand forests once sprawled across the land so dense, it is said that a squirrel could have traveled from the Northeast to the Mississippi without touching the ground. Today, what few, sparse pockets of extant old-growth forest remain tucked in the crevices of the urbanization, suburban sprawl, and agriculture. In contrast, the forests of the northwestern regions of North America still stand tall, despite continued logging and other activities, including the practice of “clear-cutting” of old-growth forests, whose ancient, intricate ecosystems do not regenerate on a timescale that we will observe. The Canadian boreal forest represents 25 percent of the world’s remaining intact forest, considered “the lungs of the world” along with the Amazon rainforest; however, Canada is also a world leader in rate of forest loss. This painting depicts a patchwork of clearcut forested area northwest of Prince George, British Columbia. In addition to being intensively logged, this region’s forests have suffered destruction from the invasive mountain pine beetle and intensified forest fires, both exacerbated by climate change in recent years." },
+            { "slide" : 1,
+	      "fn": "iliamna",
+              "title" : "Iliamna",
+              "year" : "2019",
+              "medium" : "Oil on canvas",
+	      "size" : "2' x 2'",
+	      "desc" : "Lake Iliamna is the largest lake in Alaska, and the cradle for salmon spawn for Bristol Bay -- the last intact and thriving salmon fishery in the world. This precious watershed has been under threat from the proposed mining project, Pebble Mine. Alaskans passionate about salmon have been staving off attempts to mine this region. In comparison, salmon fisheries along the southern Pacific west coast of North America have dwindled to a trickle. We must remain vigilant to prevent this amazing ecosystem from becoming another sad story of what once was. </p><br><br><a href=\"https://www.savebristolbay.org/\">www.savebristolbay.org</a><br><br>" },
+            { "slide" : 2,
+	      "fn" : "phytoplankton",
+	      "title" : "Diatoms",
+	      "year" : "2019",
+              "medium" : "Oil on canvas",
+	      "size" : "2' x 2'",
+	      "desc" : "Phytoplankton paint the colors of the ocean – brilliant shades of green and turquoise, undulating in teeming swirls. Tiny photosynthesizing creatures, they are the base of the marine food web. They are at the foundation of life in the ocean. In the Gulf of Alaska, blooms of diatoms flourish on a influx of nutrients and minerals flushed in by annual glacial melt in the spring. Ocean acidification and warming are expected to impact the composition of phytoplankton communities – changing the colors of the oceans – and effecting a bottom-up reverberation in the dynamics of ocean creatures." },
+ { "fn" : "yukonkusk",
+	      "title" : "Yukon and Kuskokwim Rivers Study",
+	      "year" : "2020",
+	      "medium" : "Acrylic on canvas",
+	      "size" : "5\" x 5\"" },
+            { "fn": "land",
+	      "title" : "Taiga Study",
+	      "year" : "2019",
+              "medium" : "<p>Graphite pencil</p> <p>on paper</p>",
+	      "size" : "8\" x 8\""},
+ { "fn" : "seaice01",
+	      "title" : "Sea Ice Study 1",
+	      "year" : "2019",
+	      "medium" : "White charcoal pencil, pastel, and acrylic on paper",
+	      "size" : "4\" x 5\"" },
+ { "fn" : "seaice02",
+	      "title" : "Sea Ice Study 2",
+	      "year" : "2019",
+	      "medium" : "White charcoal pencil and acrylic on paper",
+	      "size" : "4\" x 5\"" },
+ { "fn" : "seaice03",
+	      "title" : "Sea Ice Study 3",
+	      "year" : "2020",
+	      "medium" : "White charcoal pencil and acrylic on paper",
+	      "size" : "4\" x 5\"" },
+
+          ] },
+        "dystopic present" : {
+          "gallery": [
+	    { "fn" : "cars",
+	      "title" : "Autoimmune",
+	      "year" : "2019",
+	      "medium" : "Oil on canvas",
+	      "size" : "11\" x 14\"",
+	      "desc" : "In Fairbanks, Alaska, the coldest winter days plummet to extreme subzero temperatures. A bowl-shaped topography of the town sets up a \"temperature inversion\" in which cold air settles in low places. Air pollutants cannot escape, and collect as well, creating gauzy, smoggy conditions through which the low-lying sun can peek through." },
+	    { "fn" : "harvey",
+	      "title" : "Harvey's Omens",
+	      "year" : "2017",
+	      "medium" : "Oil paint",
+	      "size" : "18\" x 24\"",
+	      "desc" : "In August 2017, Hurricane Harvey inundated Texas with 50 feet of water, forcing the country's largest refineries to shut down and causing damage including a large chemical spill. Such surreal scenes of chaos are more and more becoming the norm in the age of the Anthropocene, inducing increasingly ominous sentiments in today's zeitgeist."  },
+ 	    { "fn" : "river",
+	      "title" : "River Turned Red",
+	      "year" : "2017",
+	      "medium" : "Oil on canvas",
+	      "size" : "11\" x 14\"",
+	      "desc" : "This image is a surreal, dystopic scene inspired by real incidents of spilled heating oil into creeks and rivers. The fuel is dyed red for identification purposes, resulting in blood-like gore when it spills."  },
+ 	    { "fn" : "wounds",
+	      "title" : "Wounds",
+	      "year" : "2014",
+	      "medium" : "Oil on canvas",
+	      "size" : "11\" x 14\"" },
+            { "fn" : "powerlines",
+	      "title" : "Scavengers",
+	      "year" : "2016",
+	      "medium" : "Watercolor",
+	      "size" : "4\" x 6\""},
+ 	    ] },
+        "nature": {
+          "gallery": [
+ 	    { "fn" : "michaux",
+	      "title" : "Michaux",
+	      "year" : "2016",
+	      "medium" : "Oil on canvas",
+	      "size" : "18\" x 24\"",
+	      "desc" : "This image was inspired by the magic that takes place annually in vernal pools in the forests of Pennsylvania -- amphibians traverse the mud and dead leaves and come together in stray pools of water to reproduce. They swirl about in this murky, wet world like slippery astronauts and deposit their gifts with each other." },
+	    { "fn" : "mushrooms",
+	      "title" : "Amanita",
+	      "year" : "2019",
+	      "medium" : "Acrylic on canvas",
+	      "size" : "4\" x 4\"" },
+            { "fn" : "birches",
+	      "title" : "Creamer's Birches",
+	      "year" : "2019",
+	      "medium" : "Acrylic on canvas",
+	      "size" : "4\" x 6\"" },
+	    ] },
+         "figures": {
+          "gallery": [
+	    { "fn" : "settling",
+	      "title" : "Settling",
+	      "year" : "2010",
+	      "medium" : "Oil on canvas",
+	      "size" : "46\" x 60\"" },
+	    { "fn" :  "sedna",
+	      "title" : "Soothing Sedna",
+	      "year" : "2009",
+	      "medium" : "Oil on canvas",
+	      "size" : "18\" x 24\"" },
+	    { "fn" : "sleepingmollie",
+	      "title" : "Sleeping Mollie, 2 a.m.",
+	      "year" : "2010",
+	      "medium" : "Oil on canvas",
+	      "size" : "24\" x 30\"" },
+	    { "fn" : "vultures1",
+	      "title" : "Thanatos 1",
+	      "year" : "2009",
+	      "medium" : "Charcoal and gouache on paper",
+	      "size" : "36\" x 64\"" },
+ 	    { "fn" : "vultures2",
+	      "title" : "Thanatos 2",
+	      "year" : "2009",
+	      "medium" : "Charcoal on watercolor paper",
+	      "size" : "22\" x 30\"" },
+
+] } } },
+    "illustration" : {
+      "gallery": [
+	     { "fn" : "beaverdamscene",
+	      "title" : "Beavers",
+	      "year" : "2020",
+	      "medium" : "Pen and ink, digital",
+	      "desc" : "This illustration is part of a series of illustrations for interpretive signs for the Department of Defence, Fort Wainwright about natural history of the Chena River.",
+	      },
+   	     { "fn" : "watershed-color",
+	      "title" : "Watershed",
+	      "year" : "2020",
+	      "medium" : "Pen, digital",
+	      "desc" : "This illustration is part of a series of illustrations for interpretive signs for the Department of Defence, Fort Wainwright about natural history of the Chena River. This is a diagram illustrating the definition of a watershed",
+	      },
+	     { "fn" : "cherryblossomsillus",
+	      "title" : "Bird Cherry Blossoms",
+	      "year" : "2020",
+	      "medium" : "Pencil, watercolor, digital",
+	      "desc" : "This illustration is part of a series of illustrations for interpretive signs for the Department of Defence, Fort Wainwright about natural history of the Chena River. Bird Cherry (<em>Prunus padus</em>) is an invasive species in Interior Alaska",
+	      },
+	     { "fn" : "elodea",
+	      "title" : "Elodea",
+	      "year" : "2020",
+	      "medium" : "Pencil, watercolor, digital",
+	      "desc" : "This illustration is part of a series of illustrations for interpretive signs for the Department of Defence, Fort Wainwright about natural history of the Chena River. Elodea (<em>Elodea canadensis, Elodea nuttallii, and hybrid species</em>) is an invasive species in aquatic ecosystems Interior Alaska",
+	      },
+	     { "fn" : "zebramussel",
+	      "title" : "Zebra Mussel",
+	      "year" : "2020",
+	      "medium" : "Pencil, watercolor, digital",
+	      "desc" : "This illustration is part of a series of illustrations for interpretive signs for the Department of Defence, Fort Wainwright about natural history of the Chena River. Zebra mussels (<em>Dreissena polymorpha</em>) are an invasive species that has greatly altered the Great Lakes and elsewhere, but has not yet invaded Alaska",
+	      },
+	      { "fn" : "hw",
+	      "title" : "Fairbanks Heart Walk T-Shirt Design",
+	      "year" : "2019",
+	      },
+	    { "fn" : "twinflower",
+	      "title" : "Twin Flower Herb Logo",
+	      "year" : "2019",
+	      },
+          {   "fn" : "say",
+	      "title" : "Negation",
+	      "year" : "2017",
+	      "desc" : "<br><p>Published in:</p><br><p><a href=\"https://www.buzzfeed.com/tomchivers/the-periphrastic-spree\">Buzzfeed</a></p><p><a href=\"https://www.theguardian.com/science/2017/nov/01/resistance-to-changes-in-grammar-is-futile-say-researchers\">The Guardian</a><br><br><p>This illustration was created to accompany a press release for a paper titled, \"Detecting evolutionary forces in language change\", published in the scientific journal, Nature in 2017. The illustration depicts the history of forms of negation in the English language over time, represented by characters from notorious pieces of literature (from left to right, \“Ic ne secge\” (Beowulf, c. 900) to \“Ic ne sege noht\” (the Ormulum, c. 1100) to \“I seye not\” (Chaucer, c. 1400) to \“I doe not say\” (Shakespeare, c. 1600) before returning to the familiar \“I don’t say\” (Virginia Woolf, c. 1900).</p>" },
+	   { "fn" : "Qlogo",
+	      "title" : "Logo for Quadirah",
+	      "year" : "2017",
+	      "desc" : "Quadirah's etsy shop: <br><a href=\"https://www.etsy.com/shop/QDee\">https://www.etsy.com/shop/QDee</a>" },
+ 	   {  "fn" : "openhand",
+	      "title" : "Logo for Open Hand",
+	      "year" : "2017",
+	      "desc" : "<p><a href=\"https://openhandband.weebly.com/\">https://openhandband.weebly.com/</a></p>" },
+ ] },
+    "photographs" : {},
+   // "community" : {},
+    "about" : {},
+    "news" : {},
+    "contact" : {},
+    "shop" : {} } }
+
+/* translate between spaces and dashes in navigation headings */
+var fragify = function (str) {
+  return(str.replace(/ /g,'-')) }
+var defragify = function (str) {
+  return(str.replace(/-/g,' ')) }
+
+/* If a function is called with missing arguments (less than declared), the missing values are set to: undefined
+Sometimes this is acceptable, but sometimes it is better to assign a default value to the parameter */
+
+/* Provide a default if undefined */  /* see below, desc.innerHTML */
+var defor = function (val, def) {
+  if(typeof val === 'undefined') { return(def) }
+  else { return(val) } }
+
+/* This generates the main image and description HTML and puts it in place */
+var loadimage = function(imgobj) {
+  var main = document.getElementById('main') ;
+  var desc = document.getElementById('desc') ;
+
+  main.innerHTML = '<img id="imain" ' +
+     // the onclick handler is for lightbox:
+    'onclick="openModal();currentSlide(' + (imgobj.slideindex + 1) + ')"' +
+    ' src="images/' + imgobj.fn + '.jpg" />'
+  desc.innerHTML = '<p><em>' + defor(imgobj.title, '') + '</em></p><br>' +
+    '<p>' + defor(imgobj.year, '') + '</p>' +
+	'<p>' + defor(imgobj.medium, '') + '</p>' +
+	'<p>' + defor(imgobj.size, '') + '<div class="description" id="description"' +
+    '</p><br>' +
+    defor(imgobj.desc, '') +
+    '</div>' }
+
+
+/* This creates the "gallery" object. */
+var loadgallery = function(galobj) {
+  var div = document.getElementById('container3') ;
+  var ih = '<div class="thumbs" id="thumbs"></div>' +
+    '<div class="main" id="main"></div>' + '<aside class="desc" id="desc"></aside>' +
+    // For lightbox:
+    '<div id="myModal" class="modal">' +
+    '<span class="close cursor" onclick="closeModal()">&times;</span>' +
+    '<div class="modal-content">' ;
+  // lightbox images (with titles, years):
+  for (i in galobj.gallery) {
+    ih = ih + '<div class="mySlides" style="text-align:center"><img src="images/' +
+      galobj.gallery[i].fn + '.jpg"><br /><em>' +
+      galobj.gallery[i].title + '</em>' + ", " +
+      galobj.gallery[i].year +
+      '<br><br><p>' +
+      '</div>' }
+  ih = ih + '<a class="prev" onclick="plusSlides(-1)">&#10094;</a>' +
+    '<a class="next" onclick="plusSlides(1)">&#10095;</a>' +
+    '</div></div>' ;
+
+  div.innerHTML = ih
+  var thumbs = document.getElementById('thumbs') ;
+
+/* This sets up the thumbnail image gallery and adds event handlers */
+  for (i in galobj.gallery) {
+    var painting = galobj.gallery[i] ;
+    painting.slideindex = Math.floor(i) // <- for lightbox *floor makes this an integer
+    var img = document.createElement("img") ;
+    img.setAttribute("src", "images/" + painting.fn + "_thumb.jpg") ;
+    img.addEventListener("click", function () {
+      loadimage(this) }.bind(painting), false) ;  // bind is element of a function, sets 'this' to 'painting'
+    thumbs.appendChild(img) ; }
+
+  loadimage(galobj.gallery[0]) ;
 }
 
-a {color: white;
-word-break: break-all;}
+/*modal pop-up*/
+function openModal() {
+  document.getElementById("myModal").style.display = "block";
+}
 
-a:hover {  color:#9DC209;}
+function closeModal() {
+  document.getElementById("myModal").style.display = "none";
+}
 
-img {
-max-width: 75%;
-display: block;
-margin-left: auto;
-margin-right: auto;}
+/*advances to next img*/
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
 
-div {
-display: flex;
-justify-content: flex-end;
+/*displays current img*/
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+/*generates modal slides*/
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+
+/* Main section intro pages (TO DO)*/
+var paintings = '';
+
+var illus = '';
+
+var illusmodal = '<div class="mySlides"><img src=\"photographs/020.jpg\"></div> <a class="prev" onclick="plusSlides(-1)">&#10094;</a><a class="next" onclick="plusSlides(1)">&#10095;</a>';
+
+
+/*var mi = document.getElementById("imain") ;
+var modalImg = document.getElementById("img01");
+mi.addEventListener("click", function(){ alert("Hello World!"); }); */
+
+var es = '<div class=\"series\"><div class=\"series"\"><p>When the Apollo 8 space mission landed, the astronauts photographed the Earth gazing back on them, foreign in its familiar reminiscence of the moon itself they then stood upon, waxing and shining. The people of Earth for the first time could visualize the Earth as a small planet within an infinitely scaling expanse. One small, unlikely blue marble, circling a star in the dark.</p><br><p>Forty years into the future, with colonial Space Age and Internet Age technologies, we casually glimpse the Earth’s surface on a daily basis. Where once these scenes revolutionized our collective conscious, we now experience them with the indifference of quotidian utility. Yet despite how commonplace this imagery has become, the subject matter remains awe-strikingly profound.</p><br><p>Our lived lives have expanded spatially and condensed temporally as we travel in automobiles, airplanes, and trains, converse through telephones, and exchange ever-increasing amounts of information through the internet. We now travel great distances with ease and speed, and organisms of all kinds get caught in the wake of our global expanse. No longer are humans confined to specific regions. One can travel from Pennsylvania to Alaska in the span of a day with no notion of the distance covered, no experience or knowledge of all the small intricateness that exists across the lands between destinations.</p><br><p>These days, one can follow dramas unfolding in your city’s streets or thousands of miles away, gazing distantly through screens, empathizing with people and places unseen and unknown. We are more connected and disconnected than ever before.</p><br><p>These days, one can gaze down upon our own destruction in real time, like dispossessed gods of ourselves. We can view through a lens in space our blue-green home, in all its grandness in full color, with all of its intricacies and layers shining in the sunlight, like delicate layers of paint.</p><br><p>As a painter, I meddle in an ancient human craft, obstinately remaining in practice despite today’s pace and precision. I manifest these imperfect images with the slowness of human hands, reinterpreting what computer eyes have seen with my own. In this way, I connect with these faraway places. I present to you scenes from this celestial, surveilling perspective free of the scars inflicted by maps and their makers.</p><br><p>This show of paintings is a tribute to these sentiments, as well a tribute to the lands themselves, the stories, histories, inquiries, and emotions we have set upon them, the names we have given them and meaning we ascribe to them, the changes they are seeing and the threats they are facing – damages done and not yet done. </p><br><p>I invite viewers to reflect on the places from which they originate, places you seek and have sought,  places you care deeply for though you have not been there, places that hold for you magic, wonderment, memory, identity, spirit. What has been gained and learned, and what has been lost and forgotten from this novel perspective of our world and worlds, large and small.</p><br></div><p class=\"cvp\"><button class=\"cv\"><a href=\"EarthscapesProgram.pdf" download>>>  \"September 12, 2020 Earthscapes Program PDF\" << </a></button></p></div>'
+
+
+var photo = '<div class=\"phorow\" id=\"phorow\"><div class=\"phocol\" id=\"phocol\"><img class=\"photog\" src=\"photographs/thumbs/001.jpg\" onclick="openModal();currentSlide(1)"><img class=\"photog\" src=\"photographs/thumbs/004.jpg\" onclick="openModal();currentSlide(4)"><img class=\"photog\" src=\"photographs/thumbs/007.jpg\" onclick="openModal();currentSlide(7)"><img class=\"photog\" src=\"photographs/thumbs/010.jpg\" onclick="openModal();currentSlide(10)"><img class=\"photog\" src=\"photographs/thumbs/013.jpg\" onclick="openModal();currentSlide(13)"><img class=\"photog\" src=\"photographs/thumbs/016.jpg\" onclick="openModal();currentSlide(16)"><img class=\"photog\" src=\"photographs/thumbs/019.jpg\" onclick="openModal();currentSlide(19)"><img class=\"photog\" src=\"photographs/thumbs/022.jpg\" onclick="openModal();currentSlide(22)"><img class=\"photog\" src=\"photographs/thumbs/025.jpg\" onclick="openModal();currentSlide(25)"><img class=\"photog\" src=\"photographs/thumbs/026.jpg\" onclick="openModal();currentSlide(26)"></div><div class=\"phocol\" id=\"phocol\"><img class=\"photog\" src=\"photographs/thumbs/002.jpg\" onclick="openModal();currentSlide(2)"><img class=\"photog\" src=\"photographs/thumbs/005.jpg\" onclick="openModal();currentSlide(5)"><img class=\"photog\" src=\"photographs/thumbs/008.jpg\" onclick="openModal();currentSlide(8)"><img class=\"photog\" src=\"photographs/thumbs/011.jpg\" onclick="openModal();currentSlide(11)"><img class=\"photog\" src=\"photographs/thumbs/014.jpg\" onclick="openModal();currentSlide(14)"><img class=\"photog\" src=\"photographs/thumbs/017.jpg\" onclick="openModal();currentSlide(17)"><img class=\"photog\" src=\"photographs/thumbs/023.jpg\" onclick="openModal();currentSlide(23)"></div><div class=\"phocol\" id=\"phocol\"><img class=\"photog\" src=\"photographs/thumbs/003.jpg\" onclick="openModal();currentSlide(3)"><img class=\"photog\" src=\"photographs/thumbs/006.jpg\" onclick="openModal();currentSlide(6)"><img class=\"photog\" src=\"photographs/thumbs/009.jpg\" onclick="openModal();currentSlide(9)"><img class=\"photog\" src=\"photographs/thumbs/012.jpg\" onclick="openModal();currentSlide(12)"><img class=\"photog\" src=\"photographs/thumbs/015.jpg\" onclick="openModal();currentSlide(15)"><img class=\"photog\" src=\"photographs/thumbs/018.jpg\" onclick="openModal();currentSlide(18)"><img class=\"photog\" src=\"photographs/thumbs/021.jpg\" onclick="openModal();currentSlide(21)"><img class=\"photog\" src=\"photographs/thumbs/024.jpg\" onclick="openModal();currentSlide(24)"><img class=\"photog\" src=\"photographs/thumbs/027.jpg\" onclick="openModal();currentSlide(27)"><img class=\"photog\" src=\"photographs/thumbs/020.jpg\" onclick="openModal();currentSlide(20)"></div></div><div id="myModal" class="modal"><span class="close cursor" onclick="closeModal()">&times;</span><div class="modal-content"><div class="mySlides"><img src=\"photographs/001.jpg\"></div><div class="mySlides"><img src=\"photographs/002.jpg\"></div><div class="mySlides"><img src=\"photographs/003.jpg\"></div><div class="mySlides"><img src=\"photographs/004.jpg\"></div><div class="mySlides"><img src=\"photographs/005.jpg\"></div><div class="mySlides"><img src=\"photographs/006.jpg\"></div><div class="mySlides"><img src=\"photographs/007.jpg\"></div><div class="mySlides"><img src=\"photographs/008.jpg\"></div><div class="mySlides"><img src=\"photographs/009.jpg\"></div><div class="mySlides"><img src=\"photographs/010.jpg\"></div><div class="mySlides"><img src=\"photographs/011.jpg\"></div><div class="mySlides"><img src=\"photographs/012.jpg\"></div><div class="mySlides"><img src=\"photographs/013.jpg\"></div><div class="mySlides"><img src=\"photographs/014.jpg\"></div><div class="mySlides"><img src=\"photographs/015.jpg\"></div><div class="mySlides"><img src=\"photographs/016.jpg\"></div><div class="mySlides"><img src=\"photographs/017.jpg\"></div><div class="mySlides"><img src=\"photographs/018.jpg\"></div><div class="mySlides"><img src=\"photographs/019.jpg\"></div><div class="mySlides"><img src=\"photographs/020.jpg\"></div><div class="mySlides"><img src=\"photographs/021.jpg\"></div><div class="mySlides"><img src=\"photographs/022.jpg\"></div><div class="mySlides"><img src=\"photographs/023.jpg\"></div><div class="mySlides"><img src=\"photographs/024.jpg\"></div><div class="mySlides"><img src=\"photographs/025.jpg\"></div><div class="mySlides"><img src=\"photographs/026.jpg\"></div><div class="mySlides"><img src=\"photographs/027.jpg\"></div> <a class="prev" onclick="plusSlides(-1)">&#10094;</a><a class="next" onclick="plusSlides(1)">&#10095;</a>';
+
+/*Community Art page*/
+var community ='<div>tst</div>';
+
+/*About page*/
+var bio = '<div class=\"bio\" id=\"bio\"><img src=\'\'><div class=\"biotext\"<p>Gaea Cherissa Dukelow is an artist/ecologist currently based in Fairbanks, Alaska. She is a granddaughter of midwestern agriculture, but raised at the edge of a gradient of eastern suburban sprawl and deciduous forest. After drifting into the charmingly gritty, beautiful complexity of Philadelphia for several years, she gathered up a satchel of pent-up wanderlust and exported herself to the vast, last frontier, the Golden Heart City, Fairbanks, Alaska. There, she collects ecological data by occuption, and occupies a studio at Well Street Art Company. </p><br><p>Having studied art at the Maryland Institute College of Art in Baltimore, MD and forest ecology at SUNY College of Environmental Science and Forestry in Syracuse, New York, she manifests a view of the world that mixes intuition and myth-making with critical analysis and reflection. Inspired both by the infinite beauty of the natural world and the mourning of its destruction, she grapples with the cognitive dissonance left behind in the wake of this strange, modern world, memorializing this sensation with the vividness of traditional painting media. </p><br></div><p class=\"cvp\"><button class=\"cv\"><a href=\"GCherissaDukelow--CV.pdf" download>>>  CV << </a></button></p>';
+
+/*News page*/
+var news = '<div class=\"news\"><div class=\"newstext"\"><object data="news.html" width="100%" height="100%" ></object></div>';
+
+//<br><p>More photos <a href=\'\'>here</a>.</p>
+
+/*Contact page*/
+var contactform = '<div class=\"contactform-container\" id=\"contactform\"><p><em>Send me a message, ask about buying originals, commissions, or request to receive (very occasional) news:</em></p><br><form action=\"https://formspree.io/mgekdezk\" method="POST"><label>Name</label><input type=\"text\" id=\"name\" name=\"name\" placeholder=\"Your name..\"><label>Email Address</label><input type=\"text\" id=\"email\" name=\"_replyto\" placeholder=\"Your email address..\"><label>Subject</label><input type=\"text\" id=\"subject\" name=\"subject\" placeholder=\"Subject..\"><label>Message</label><textarea id=\"message\" name=\"message\" placeholder=\"Write something..\" style=\"height:200px\"></textarea><input type=\"submit\" value=\"Submit\"></form></div>';
+
+
+
+/* the hash.substring is the "fragment identifier" (see wikipedia, excerpt below). By loading
+the appropriate content corresponding to the fragment identifier, you can make
+stable shareable links. */
+	/* The fragment identifier introduced by a hash mark # is the optional last part of a URL for a document.
+	It is typically used to identify a portion of that document. Example: In http://www.example.org/foo.html#bar
+	the fragment refers to the element with id="bar". */
+/* This section is creating the fragments of the page - the sections and subsections - based on the structure of var site above.*/
+var loadfragment = function (fragarg) {
+  var frag = (typeof fragarg === 'string') ? fragarg : 		/* ? : is the 'conditional operator' --- condition ? value-if-true :
+									value-if-false (in other words, the question is equivalent to an if statement and 									the colon is equivalent to else statement*/
+    window.location.hash.substring(1) ;      /* obtains the fragment identifier (value afer #) from url --- the element id, or in this case, the JS "keys" in var site */
+  var parts = frag.split('.')		/* The split() method is used to split a string into an array of substrings, and returns the new array.
+					This splits the fragments of site into an array (splits up the key:pair sections at '.').
+					This ultimately creates i.e. paintings.earthscpes becomes #paintings.earthscapes */
+
+  var page = site		/* var site is the whole structure of the webpage, defined above in a big chunk. (array of objects) */
+    var d = "dystopic-present" ;
+    var dp = defragify(d) ;
+    var loadseg = function (seg) {
+	  document.getElementById("container3").innerHTML = seg }
+    for (i in parts) {
+      if (typeof page !== 'undefined') {		/* if var page is set = to something (contains an additional subsection), see next line
+						to determine which subsection of the page should be loaded,
+						i.e. which part of var site we're at */
+        page = page.nav[defragify(parts[i])] }		/*var defragify replaces dashes with spaces. This specifies which subsection to load based on i part */
+
+
+		     }
+    if (typeof page === 'undefined') { 	loadgallery(site.nav.paintings.nav.earthscapes) }
+    if (frag == "paintings") { loadgallery(site.nav.paintings.nav.earthscapes) }
+    if (frag == "paintings.earthscapes") { loadseg(es) }
+    if (frag == "paintings" + "." + d) { loadgallery(site.nav.paintings.nav[defragify(dp)]) }
+    if (frag == "paintings.nature") { loadgallery(site.nav.paintings.nav.nature) }
+    if (frag == "paintings.figures") { loadgallery(site.nav.paintings.nav.figures) }
+    if (frag == "illustration") { loadgallery(site.nav.illustration) }
+    if (frag == "photographs") { loadseg(photo) }
+   // if (frag == "community" ) { loadseg(community) }
+    if (frag == "about") { loadseg(bio) }
+    if (frag == "news") { loadseg(news) }
+    if (frag == "contact") { loadseg(contactform) }
+    if (frag == "shop") { open("https://www.inprnt.com/gallery/gaea-cherissa/") }
+     }
+
+
+/* ^ This whole section is to create the sections of the webpage and how to choose which one should be loaded.  */
+
+
+/* This makes the navigation bar */
+var makenavbar = function () {
+  var navbar = document.getElementById('navbar') ;
+  var ih = "<nav><ul>" ;
+  for (var page in site.nav) {
+    if (site.nav[page].nav) {
+      ih = ih + '<li class="dropdown">' ;
+      ih = ih + '<a href="#' + fragify(page) + '" onClick="loadfragment(\'' +
+        fragify(page) + '\')" class="dropbtn">' +
+        page + '</a>' ;
+      ih = ih + '<div class="dropdown-content">' ;
+      for (var subpage in site.nav[page].nav) {
+        ih = ih + '<a href="#' + fragify(page + '.' + subpage) +
+          '" onClick="loadfragment(\'' +
+          fragify(page + '.' + subpage) + '\')" class="dropbtn">' +
+          subpage + '</a>' ;
+      }
+      ih = ih + '</div>' ;
+    } else {
+      ih = ih + '<li><a href="#' + fragify(page) +
+        '" onClick="loadfragment(\'' + fragify(page) + '\')">' +
+        page + '</a></li>' ;
+  } }
+  ih = ih + "</ul></nav>" ;
+  navbar.innerHTML = ih }
+
+/*Mobile Nav Icon*/
+function hambnav() {
+  var x = document.getElementById("navbar");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
 }
 
 
-</style>
+/* When the HTML is loaded, we call all these functions to create the rest of
+  the HTML for the site */
+window.addEventListener("load", makenavbar) ;
+window.addEventListener("load", loadfragment) ;
+
+</script>
+</head>
 <body>
 
-  <p><h4><u>February 5, 2021 : Fairbanks Arts Association "Gift Shop Artist of the Month" && Well Street Art Co.'s "The Pink Show"</u></h4>
-   <br>
-   <img src="newsphotos/gsam.jpg" class="center">
-   </p>
-   <br>
-   <p>This month, the Fairbanks Arts Association is featuring me as their "Gift Shop Artist of the Month." We set up a sort of mini exhibit in their gift shop with two original pieces, reproduction prints, postcards, and stickers. Olena Ellis and John Hagen have their beautiful work exhibited in the gallery.
-   <br>
-   <p><div><img src="newsphotos/pinkshow.jpg" class="center" height="250px" style="padding: 6px"> <img src="newsphotos/pinkshow2.jpg" class="center" height="250px" style="padding: 6px"></p></div>
-   <p>Meanwhile, Ethan Lauesen curated their first open-call exhibition at Well Street Art Co., "The Pink Show," for which I created a couple of small post-wildfire regeneration scenes with blazes of fireweed.</p>
-   <br>
-   <p>
-   <h4><u>January 30, 2021 : Fairbanks Arts Association's F.A.M. Show</u></h4>
-   <br>
-   <img src="newsphotos/usibelli.jpg" class="center">
-   </p>
-   <br>
-   <p>The Fairbanks Art Association’s member invitational show this past month was good time – a delightful turnout of community members!</p>
-   <br>
-   <p>This painting I contributed to the show depicts an aerial view of Healy and the Usibelli Coal Mine – the only operational coal mine in Alaska. The area is a open-pit surface mine operation. Surface mining involves accessing coal (or other minerals) by clearing forests and using heavy earth-moving equipment and explosives to excavate the earth to access coal seams that are up to a few hundred feet below the surface.</p>
-   <br>
-   <p>Coal mined from Usibelli fuels 6 coal-fired power plants which provide about 40% of the electricity in Interior Alaska.</p>
-   <br>
-   <p>Included in these 6 coal-fired power plants is the Fort Wainwright 65-year old central heat and power plant (CHPP), which is at risk of malfunction or failure and presently under evaluation to remain in use, be replaced by a new coal-fired CHPP, be replaced by a natural gas-fueled system, or potentially other proposed alternatives that meet their criteria.</p>
-   <br>
-   <p>A Draft Environmental Impact Statement regarding this decision is open for a second round of public comments until February 22, 2021.</p>
-   <br>
-   <p><a href="https://home.army.mil/alaska/index.php/fort-wainwright/NEPA/HEU-EIS" target="_blank">https://home.army.mil/alaska/index.php/fort-wainwright/NEPA/HEU-EIS</a></p>
-   <br>
-   <p>
-    <h4><u>January 15, 2021 : Wild & Scenic Film Festival</u></h4>
-   <br>
-   <div><img src="newsphotos/WildScenicScreenshot1.png" class="center" height="250px"><img src="newsphotos/WildScenicScreenshot2.png" class="center" height="250px"></div>
-   </p>
-   <br>
-   <p>The three paintings I created for the Northern Alaska Environmental Center, "Refuge," "Teshekpuk," and "District" are featured in a virtual juried art exhibit as part of the Wild and Scenic Film Festival. The festival is organized annually, usually taking place in Nevada City and Grass Valley, CA, but due to the pandemic, for 2020 the festival is virtual.  The Northern Alaska Environmental Center's recent documentary film "Love is the Way," about the stories of activists and other Alaskans in the fight to protect the Arctic Refuge. The online festival is January 14-24.
-   <br>
-   <p><a href="https://wsff.eventive.org/welcome" target="_blank">https://wsff.eventive.org/welcome</a></p>
-   <br>
-   <p><a href="http://www.wildandscenicfilmfestival.org/art" target="_blank">http://www.wildandscenicfilmfestival.org/art</a></p>
-   <br> 
-   <p>
-   
-   <h4><u>November 13, 2021 : Artist Talk and Northern Alaska Environmental Center Auction</u></h4>
-   <br>
-   <div><img src="newsphotos/ArtistTalk1.png" class="center" height="250px"><img src="newsphotos/ArtistTalk2.png" class="center" height="250px"></div>
-   </p>
-   <br>
-   <p>The Northern Alaska Environmental Center is hosting a week of fundraising events called "Nights for the North," which will include an online auction of original commissioned artwork that I did for them as well as prints doing an online auction of three paintings they commissioned from me this year. </p>
-   <br>
-   <p>Here is a link to the auction: <a href="https://www.32auctions.com/NightsForTheNorth" target="_blank">https://www.32auctions.com/NightsForTheNorth</a></p>
-   <br>
-   <p>Watch a recording of the talk <a href="https://us02web.zoom.us/rec/play/eJEHYaZgwEAwK5tKcY0SGntsvPX3pcUMikakh2zqEcOnwXFVmO7ohstL5TCzDThSw-ElZEIJWNgwdJwY.JFIAMi-Qylwii3Sq?startTime=1605240145000&_x_zm_rtaid=RzcmLkemTWWwTWetmHNkTw.1613520775431.32259e9cc9c5fc499dad831a5d39d81f&_x_zm_rhtaid=935" target="_blank">here</a>.</p>
-   <br>
-   <br>
-   <p>
-   <h4><u>September 15, 2020 : Earthscapes Show in the Lemonade Stand</u></h4>
-   <br>
-   <p><img src="newsphotos/earthscapeswall.JPG" class="center"></p>
-   <br>
-   <p>The Northern Alaska Environmental Center Featured Artist of 2020 show with the Lemonade Stand was a great and lovely success! It was a beautiful fall evening with good spirits. The show remains intact in the Lemonade Stand adjacent to Tamara's house for folks who were not able to make the Saturday show. To come see the show, send me an email at the address at the bottom of this webpage, or through the 'contact' section. The show will remain until the end of September, like leaves falling from trees.</p>   
-   <br>
-   <p><img src="newsphotos/flowersnotes.JPG" height="250px"></p>
-   <br>
+<div class="container">
 
-   <h4><u>September 6, 2020 : Interview in the Fairbanks Daily-News Miner</u></h4>
-   <br>  
-   <p>The Fairbanks Daily News-Miner was kind enough to interview me and feature me in a page in their Sunday paper today! Article by David James.</p>
-   <br>
-   <a href="http://www.newsminer.com/features/sundays/becoming_alaskan/the-earth-is-her-canvas-and-cherissa-dukelow-is-capturing-its-changes/article_39cf2bc4-ef35-11ea-b175-e766fb0846db.html" target="_blank"><em>The Earth is her canvas, and Cherissa Dukelow is capturing its changes</em></a></p>
-   <br>
-   <p><a href="newsphotos/newsminer.jpg" target="_blank"><img src="newsphotos/newsminer_crop.jpg" width="100%" style="padding: 6px">
-   </a></p>
-   <br>
-   <h4><u>August 30, 2020 : Earthscapes Show in the Lemonade Stand</u></h4>
-   <br>
-   <p></p>
-   <br>
-   <p><img src="newsphotos/LemonadeIG.jpg" height="250px" ></p>
-   <br>
-   <p>The Northern Alaska Environmental Center has been so kind to choose me to be their "Featured Artist of 2020," and we are coordinating with the Lemonade Stand, a mobile art gallery to exhibit the paintings I have created for them and otherwise outside their office on College Road on Saturday, September 12. Details below:</p>
-   <br> 
-   <p>*    *    *    *    *    *    *    *    *    *    *    *    *    *    *    *    *    *    *    *    *</p>
-   <br>
-   <p><b><u>Where</b></u>: The Northern Alaska Environmental Center, 830 College Road, Fairbanks, AK</p><br><p><b><u>When</b></u>:  Saturday, September 12, 5pm - 8pm</p><br><p><b><u>Covid</b></u>: Please wear a mask & stay distanced 6 ft apart. You will be given a number, and Tamara will call your number when it is your turn to enter the Lemonade Stand. (Folks will enter one at a time, or one bubble group at a time.)</p><br><p><b><u>Facebook Event Page</b></u>:  <a href="https://www.facebook.com/events/779611899449074" target="_blank">https://www.facebook.com/events/779611899449074</a></p>
-   <br>
-   <p>*    *    *    *    *    *    *    *    *    *    *    *    *    *    *    *    *    *    *    *    *</p>
-   <br> 
-   <p>            
-   <h4><u>June 8, 2020</u></h4></p><br><p>Today I participated in the Tanana Valley Watershed Association's Storm Drain Art Day in downtown Fairbanks on 3rd Avenue next to the post office, and painted my design they selected to be included -- a beaver swimming with a branch in its mouth toward the storm drain.</p>
-   <br> 
-   <div><img src="beaverphotos/prog1.jpg" height="250px" style="padding: 6px"><img src="beaverphotos/close.jpg" height="250px" style="padding: 6px"></div></p> 
-   <br>
-   <p><a href="http://www.tvwatershed.org/" target="_blank">http://www.tvwatershed.org/</a></p>
-   <br>
-   <p>
-   <h4><u>June 5, 2020 : <i>13+</i>, First Friday Exhibit Premiere of the Lemonade Stand </u></h4></p>
-   <br>For June 2020 first friday, my work was included in a group show for the grand opening show of Tamara Wilson's Lemonade Stand. The show was titled, <i>13+</i>, and included one piece of work from 13 artists of various styles. It as so exciting to see Tamara's amazing mobile galley, an artwork in itseslf and a labor of love.</p>
-   <br>
-   <img src="lemonadestand/wall.jpg" height="250px" class="center"></p> 
-   <br><p><a href="https://www.instagram.com/lemonadester/" target="_blank">https://www.instagram.com/lemonadester/</a></p>
-   <p><a href="https://lemonadester.com/" target="_blank">www.lemonadester.com</a></p>
-   <br>
-   <p>
-   <h4><u>June 4, 2020 : Featured Artist of 2020</u></h4><br><p>I have been kindly selected by the Northern Alaska Environmental Center as their Featured Artist of 2020! They are commissioning work from me similar to my previous 'Earthscapes' painting series that will be of locations they choose to go along with their work fighting aginst oil drilling and mining projects in Alasksa wilderness areas: Teshekpuk Lake, the Arctic National Wildlife Refuge, and the Brooks Range. They will feature my art in their graphic materials, and we will put together a show of our work this fall. Thankful for this opportunity!</p>
-   <br>
-   <a href="https://northern.org/" target="_blank">https://northern.org/</a></p>
-   <br>
-   <br>
-   <br>
-   
+	  <div class="gaea">
+		<a href="index.html" style="text-decoration: none"><h1>gæa</h1></a>
+	  </div>
+<div><a href="javascript:void(0);" class="icon" onclick="hambnav()">
+   		&#x25BC;</a>
+		</div>
+	<div class="container2">
+
+		<!-- Navigation Bar -->
+		  <div id="navbar" class="navbar">
+          </div>
+		<div class="container3" id="container3">
+           <!-- Javascript fills this in -->
+		</div>
+        <!-- Footer is the same for all pages -->
+			<footer>
+				<aside class="mourning">
+				<p>Painting, illustration, <p></p>ecological romanticism &amp; <p></p>mourning</p></aside>
+
+				<div class="container-cherissa">
+					<div class="cherissa">
+					<a href="index.html" style="text-decoration: none"><h1>cherissa</h1></a>
+					</div>
+					<aside class="send">
+					<p>Send messages to:
+					<p></p>cherissa [ at ] localpost.io</p>
+					<br>
+					<p>Follow on Instagram <a href="https://www.instagram.com/gaea_cherissa/" style="text-decoration: none">@gaea-cherissa</a></p>
+
+					</aside>
+			</footer>
+		</div>
+	</div>
 </div>
 </body>
-</html>
