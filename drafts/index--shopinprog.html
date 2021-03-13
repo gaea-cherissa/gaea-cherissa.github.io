@@ -4,29 +4,751 @@
     <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8"/>
-    <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville&display=swap" rel="stylesheet"> 
+  
     <title>gaea cherissa | art</title>
 
-<link rel="stylesheet" type="text/css" href="style.css" media="screen">
+<style type="text/css" media="screen"><!--
+* {
+box-sizing: border-box;
+padding: 0px;
+margin: 0px;
+}
+
+body {
+background-color: black;
+font-family: Courier, monospace;
+color: white;
+white-space: nowrap;
+}
+
+/* Mobile Styles */
+@media only screen and (max-width: 400px) {
+  body {
+height: 70%;
+width: 90%;
+ margin: auto;
+  } }
+
+  
+/* Desktop Styles */
+@media only screen and (min-width: 401px) {
+  body {
+    height: 475px;
+    width: 900px;
+    margin: auto;
+  } }
+
+a {color: white;
+word-break: break-all;}
+
+a:hover {  color:#9DC209;}
+
+/* Mobile Styles */
+@media only screen and (max-width: 400px) {
+h1 {
+font-family: 'Libre Baskerville', serif;
+font-weight: 350;
+font-size: 3em;
+}
+}
+
+/* Desktop Styles */
+@media only screen and (min-width: 401px) {
+h1 {
+font-family: 'Libre Baskerville', serif;
+font-weight: 550;
+font-size: 4em;
+} }
+
+h1:hover {color: white;}
+
+/* Mobile Styles */
+@media only screen and (max-width: 400px) {
+.gaea {
+ justify-content: flex-start; 
+padding-bottom: 0px;
+} }
+/* Desktop Styles */
+@media only screen and (min-width: 401px) {
+.gaea {
+ justify-content: flex-start; 
+padding-bottom: 0px;
+position: relative;
+top: 18px;
+} }
+
+
+/* Mobile Styles */
+@media only screen and (max-width: 400px) {
+.icon {
+display: none;
+/*position: absolute;
+top: 10px;
+right: 20px;
+text-decoration: none;
+justify-content: flex-end; */
+}
+
+
+.navbar {
+display: flex;
+
+width: 100%;
+padding-top: -5px;
+padding-bottom: 5px;
+overflow-x: auto;
+overflow-y: hidden;
+}
+
+nav {
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+display: inline;
+}
+
+li a, .dropbtn {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 5px;
+  text-decoration: none;
+}
+
+li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #aeC209;
+opacity: 0.95;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,1);
+  z-index: 1;
+border: 1px solid black;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #8da105;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+}
+  
+/* Desktop Styles */
+@media only screen and (min-width: 401px) {
+.icon {
+display:none;
+}
+.navbar {
+display: flex;
+justify-content: space-evenly;
+align-items: center;
+width: 100%;
+padding-top: -5px;
+padding-bottom: 5px;
+}
+
+nav {
+font-weight: 200;
+font-style: normal;
+position: relative;
+left: 13px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+display: inline;
+}
+
+li a, .dropbtn {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  text-decoration: none;
+}
+
+li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #aeC209;
+opacity: 0.95;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,1);
+  z-index: 1;
+border: 1px solid black;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #8da105;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+}
+
+/* Mobile Styles */
+@media only screen and (max-width: 400px) {
+.container {
+height: 100%;
+display: flex;
+flex-direction: column;
+}
+.container2 {
+display: flex;
+flex-direction: column;
+height: 100%;
+}
+.container3 {
+display: flex;
+flex-direction: column;
+height: 345px;
+overflow-y: auto; 
+overflow-x: hidden;
+border: 1px solid white;
+padding: 4px;
+margin: 4px;
+} 
+
+.thumbs {
+display: flex;
+width: 100%;
+height: 20%;
+flex-shrink: 0;
+flex-grow: 0; 
+order: 1;
+overflow-x: auto;
+overflow-y: hidden;
+padding: 0 20px 0 5px;
+}
+
+.thumbs img {
+max-height: 100%;
+max-width: 100%;
+padding: 0 10px 5px  0;
+} }
+
+/* Desktop Styles */
+@media only screen and (min-width: 401px) {
+.container {
+display: flex;
+flex-direction: column;
+margin-top: 0;
+margin-left: 10%;
+margin-right: 10%;
+margin-bottom: 10%;
+}
+.container2 {
+display: flex;
+flex-direction: column;
+}
+.container3 {
+display: flex;
+height: 380px;
+border: 1px solid white;
+padding: 12px;
+} 
+
+.thumbs {
+display: flex;
+flex-shrink: 0;
+flex-grow: 0; 
+width: 17%;
+order: 1;
+flex-direction: column;
+overflow-x: hidden;
+overflow-y: scroll;
+}
+
+.thumbs img {
+width: 100%;
+height: auto;
+padding: 0 10px 5px  0;
+} }
+
+/* Mobile Styles */
+@media only screen and (max-width: 400px) {
+.main {
+order: 2;
+justify-content: center;
+align-self: center;
+width: 90%;
+height: auto;
+padding-top: 5px;
+padding-bottom: 5px;
+margin: auto;
+}
+
+.main img {
+max-width: 100%;
+max-height: 100%;
+padding: 5px;
+} 
+
+.desc { 
+white-space: normal; 
+width: 100%;
+height: ;
+order: 3;
+justify-content: flex-start;
+align-self: flex-end;
+padding: 2px;
+} 
+
+.description {
+white-space: normal; 
+padding: 0 8px 0 0;
+height: 100px;
+} }
+
+/* Desktop Styles */
+@media only screen and (min-width: 401px) {
+.main {
+display: flex;
+order: 2;
+justify-content: center;
+align-items: center;
+width: 53%;
+}
+
+.main img {
+max-width: 100%;
+max-height: 350px;
+padding: 0 10px 0 10px;
+} 
+
+.desc { 
+white-space: normal; 
+flex-shrink: 0;
+flex-grow: 0; 
+width: 30%;
+height: 100%;
+order: 3;
+align-self: flex-end;
+padding: 6px;
+} 
+
+.description {
+white-space: normal; 
+height: 250px; 
+overflow-y: auto; 
+padding: 0 8px 0 0;
+overflow-x: hidden;
+} }
+
+.phorow {
+display: flex;
+padding: 0 4px;
+overflow-x: hidden;
+overflow-y: scroll;
+}
+
+.phocol {
+flex: 33%;
+max-width: 33%;
+white-space: normal;
+flex-direction: column;
+padding: 0 4px;
+
+}
+
+.phocol img {
+margin-top: 8px;
+vertical-align: middle;
+width: 100%;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 50px;
+  padding-top: 50px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+}
+
+.modal-content {
+  position: relative;
+  margin: auto;
+  padding-bottom: 40px;
+  width: 90%;
+  max-width: 1200px;
+  height: 100%;
+max-height: 900px;
+background-color: black;
+}
+
+.close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.mySlides {
+  display: none;
+height: 100%;
+}
+
+.mySlides img {
+display: block;
+max-width: 100%;
+max-height: 100%;
+margin: auto;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/*.cvp {
+order: 2;
+display: block;
+}*/
+
+/* Mobile Styles */
+@media only screen and (max-width: 400px) {
+.bio {
+display: flex;
+width: 100%;
+margin-right: 20px;
+margin-bottom: 20px;
+align-items: flex-end;
+flex-direction: column; 
+}
+
+.biotext {
+background: #000000;
+padding: 12px;
+width: 100%;
+height: 100%;
+overflow-x: hidden;
+overflow-y: scroll;
+white-space: normal;
+margin: 6px;
+} }
+
+.cv {
+background: #000000;
+padding: 12px;
+border: none;
+}
+
+/* Desktop Styles */
+@media only screen and (min-width: 401px) {
+.bio {
+display: flex;
+background-image: url(wading.jpg);
+background-size: 100%;
+background-repeat: no-repeat;
+width: 100%;
+align-items: flex-end;
+flex-direction: column; 
+}
+
+.biotext {
+//display: block;
+//position: relative;
+background: #00000080;
+padding: 12px;
+width: 390px;
+height: 240px;
+overflow-x: hidden;
+overflow-y: scroll;
+white-space: normal;
+margin-top: 20px;
+margin-right: 20px;
+} }
+
+.cv {
+background: #000000;
+padding: 12px;
+border: none;
+margin: 35px 20px;
+}
+
+/* Mobile Styles */
+@media only screen and (max-width: 400px) {
+.news {
+display: flex;
+width: 100%;
+}
+
+.newstext {
+background: #000000;
+padding: 12px;
+width: 100%;
+height: 100%;
+overflow-x: hidden;
+overflow-y: scroll;
+white-space: normal;
+margin: 6px;
+} 
+
+.shop {
+//display: flex;
+width: 100%;
+background: #000000;
+padding: 12px;
+height: auto;
+overflow-x: hidden;
+overflow-y: scroll;
+white-space: normal;
+margin: 6px;
+} 
+
+.series {
+display: flex;
+width: 100%;
+padding: 12px;
+width: 100%;
+height: 100%;
+overflow-x: hidden;
+overflow-y: scroll;
+white-space: normal;
+margin: 6px;
+} }
+
+
+/* Desktop Styles */
+@media only screen and (min-width: 401px) {
+.news {
+display: flex;
+background-image: url(figuresketch.jpg);
+background-size: contain;
+background-repeat: no-repeat;
+width: 100%;
+height: auto;
+background-position: right bottom; 
+}
+
+.newstext {
+background: #00000080;
+padding: 12px;
+width: 100%;
+overflow-x: hidden;
+overflow-y: scroll;
+white-space: normal;
+margin-top: 20px;
+margin-right: 20px;
+} 
+
+.shop {
+display: grid;
+grid-template-columns: 50% 50%;
+grid-template-rows: auto;
+width: 100%;
+//height: auto;
+background: #00000080;
+padding: 12px;
+width: 100%;
+overflow-x: hidden;
+overflow-y: scroll;
+white-space: normal;
+margin-top: 20px;
+margin-right: 20px;
+} 
+
+.series {
+padding: 12px;
+width: 100%;
+overflow-x: hidden;
+overflow-y: scroll;
+white-space: normal;
+
+} }
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  font-family: 'Courier New', Courier, monospace;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #aeC209;
+  font-family: 'Courier New', Courier, monospace;
+  color: black;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,1);
+  border: 1px solid black;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 16px;
+}
+
+input[type=submit]:hover {
+  background-color: #8da105;
+}
+
+.contactform-container {
+  padding: 16px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  white-space: normal;
+  height: 100%;
+  width: 100%;
+}
+
+/* Mobile Styles */
+@media only screen and (max-width: 400px) {
+footer {
+padding: 0;
+}
+.mourning {
+display: none;
+}
+
+.container-cherissa {
+float: right;
+}
+
+.cherissa {
+}
+
+.send { order: 2;}
+}
+
+/* Desktop Styles */
+@media only screen and (min-width: 401px) {
+footer {
+  display: flex;
+  justify-content: space-between;
+margin-bottom: 20px;
+} 
+
+.mourning {
+position: relative;
+left:29px;
+top: 18px;
+}
+
+.container-cherissa {
+display: flex;
+order: 2;
+flex-direction: column;
+justify-content: flex-end;
+}
+
+.cherissa {
+order: 1;
+justify-content: flex-end;
+padding-bottom: 0px;
+}
+
+.send { order: 2;}
+}
+
+.center {
+display: block;
+margin-left: auto;
+margin-right: auto;
+}
+
+.center-div {
+display: flex;
+justify-content: center;
+margin: 0 auto;
+width: 100%; 
+}
+
+
+
+
+
+</style>
 <script language="Javascript" type="text/javascript">
 
 /* To build out the content of the site, look in the javascript (right after the css in the file) and the first thing you will see is a giant "object" called site. You can sort of imagine how it works. { "key" : "value" } in javascript means an object, which is a list of key-value pairs. [ {...}, {...}, ... ] means an array of objects. So for example the global "nav" is an object which contains "paintings", "illustration", et c. Meanwhile "paintings" is an object with its own nav, which is your submenu of earthscapes, dystopic present, et c. See wikipedia for JSON for more info on the syntax here. Some of those pages have a "gallery", which is an array of objects, each one has a "fn" (filename, but without the .jpg or _thumb.jpg), title, year, medium, size, and "desc". desc is a big blob of whatever HTML you want to use to describe it. You can see that teshekpuk has all these attributes defined but iliamna only has some, so only part of the description shows up for iliamna when you click on it. The rest have nothing defined so nothing shows up in the description area. You can fill in more descriptions and filenames to put content into the site. */
 
 /* Here we specify the overall structure of the page in JSON */
 /* This is how we edit the site. The javascript will generate the HTML */
-var site = {
+var site = {  
   "nav" : {
     "paintings" : {
       "nav" : {
         "earthscapes" : {
-          "gallery": [
+          "gallery": [	
           { "fn" : "ANWR",
 	      "title" : "Refuge",
 	      "year" : "2020",
 	      "medium" : "Oil on canvas",
-	      "size" : "24\" x 24\"",
-	      "desc" : "<p>The Arctic National Wildlife Refuge, also known in Gwich’in as, <em>Iizhik Gwats’an Gwandaii Goodlit</em>, or, \“The Sacred Place Where Life Begins,\” and disaffectionately \“Section 1002\” has sustained human and animal life since time immemorial. The far-reaching lore of this region’s unique magic captures hearts and minds far and wide. Yet, an ongoing debate over that which lies beneath its caribou birthing grounds has ensued for decades, and is now at a crucial pinnacle.</p></br><p>This region is important habitat for 180 migratory bird species, polar bears in search of sea ice, the Porcupine caribou herd, and it is traditional land of the Gwich’in and Inupiaq people. </p></br>In 2017, the Trump administration passed the Tax Cuts and Jobs Act that included amendments to the Alaska National Interest Lands Conservation Act by Lisa Murkowski that mandated at least two lease sales in the Coastal Plain of the Arctic Refuge for oil drilling. An Environmental Impact Statement was completed in 2019. Currently, a Record of Decision is in progress for the official lease auction.</p></br><p>NEPA, the National Environmental Policy Act requires development projects on federal land– such as drilling for oil in the Refuge, the Keystone XL Pipeline, and the Dakota Access Pipeline – to undergo environmental impact assessment. NEPA also requires consideration of the disproportionate impacts to minority and low-income communities which have too often been the frontlines of environmental degradation.</p></br><p>This year, the Trump administration finalized revisions to NEPA that loosen its requirements, limits the length and time allotted for impact assessments, eliminates requirement to consider cumulative impacts and climate change, and reduces public accessibility. </p></br><p>Allowing extraction industries to get their feet in the door in this way facilitates future efforts to continue ripping up that which we hold vital and sacred without limitation. </p></br><p>This painting was one of three paintings commissioned by the <a hre=\"https://northern.org/\">Northern Alaska Environmental Center</a> and will be up for auction to support their work in November.</p><br><p>More information about how to take action for the refuge here:</p?<br><p><a href=\"https://www.defendthesacredalaska.org/arctic-refuge/\">https://www.defendthesacredalaska.org/arctic-refuge/</a></p><br><p><a href=\"https://northern.org/news/arctic-refuge-action-whats-next/\">https://northern.org/news/arctic-refuge-action-whats-next/</p>" },
+	      "size" : "2' x 2'" ,
+	      "desc" : "<p>The Arctic National Wildlife Refuge, also known in Gwich’in as, <em>Iizhik Gwats’an Gwandaii Goodlit</em>, or, \“The Sacred Place Where Life Begins,\” and disaffectionately \“Section 1002\” has sustained human and animal life since time immemorial. The far-reaching lore of this region’s unique magic captures hearts and minds far and wide. Yet, an ongoing debate over that which lies beneath its caribou birthing grounds has ensued for decades, and is now at a crucial pinnacle.</p></br><p>This region is important habitat for 180 migratory bird species, polar bears in search of sea ice, the Porcupine caribou herd, and it is traditional land of the Gwich’in and Inupiaq people. </p></br>In 2017, the Trump administration passed the Tax Cuts and Jobs Act that included amendments to the Alaska National Interest Lands Conservation Act by Lisa Murkowski that mandated at least two lease sales in the Coastal Plain of the Arctic Refuge for oil drilling. An Environmental Impact Statement was completed in 2019. Currently, a Record of Decision is in progress for the official lease auction.</p></br><p>NEPA, the National Environmental Policy Act requires development projects on federal land– such as drilling for oil in the Refuge, the Keystone XL Pipeline, and the Dakota Access Pipeline – to undergo environmental impact assessment. NEPA also requires consideration of the disproportionate impacts to minority and low-income communities which have too often been the frontlines of environmental degradation.</p></br><p>This year, the Trump administration finalized revisions to NEPA that loosen its requirements, limits the length and time allotted for impact assessments, eliminates requirement to consider cumulative impacts and climate change, and reduces public accessibility. </p></br><p>Allowing extraction industries to get their feet in the door in this way facilitates future efforts to continue ripping up that which we hold vital and sacred without limitation. </p></br><p>This painting was one of three paintings commissioned by the <a hre=\"https://northern.org/\">Northern Alaska Environmental Center</a> and will be up for auction to support their work in November.</p><br><p>More information about how to take action for the refuge here:</p?<br><p><a href=\"https://www.defendthesacredalaska.org/arctic-refuge/\">https://www.defendthesacredalaska.org/arctic-refuge/</a></p><br><p><a href=\"https://northern.org/news/arctic-refuge-action-whats-next/\">https://northern.org/news/arctic-refuge-action-whats-next/</p>" },	
            { "fn" : "earthcolony",
 	      "title" : "Earth Colony",
 	      "year" : "2020",
@@ -37,41 +759,41 @@ var site = {
 	      "title" : "Deh Cho",
 	      "year" : "2020",
 	      "medium" : "Oil on canvas",
-	      "size" : "24\" x 24\"",
-	      "desc" : "Deh Cho, AKA Kuukpak, AKA the Mackenzie River is the second longest river in North America. This great river flows northwest across a great expanse of frozen taiga and tundra, and discharges an incredible amount of freshwater into the Beaufort Sea - the Arctic Ocean - particularly in early summer as large amounts of snow and ice melt and drain into the watershed. The warm, fresh, river water and sediment swirl into the Beaufort Sea and stir and break up the sea ice. This water entering the Arctic Ocean from the Mackenzie River contributes largely to the regulation of ocean circulation and extent of sea-ice cover." },
+	      "size" : "2' x 2'" ,
+	      "desc" : "Deh Cho, AKA Kuukpak, AKA the Mackenzie River is the second longest river in North America. This great river flows northwest across a great expanse of frozen taiga and tundra, and discharges an incredible amount of freshwater into the Beaufort Sea - the Arctic Ocean - particularly in early summer as large amounts of snow and ice melt and drain into the watershed. The warm, fresh, river water and sediment swirl into the Beaufort Sea and stir and break up the sea ice. This water entering the Arctic Ocean from the Mackenzie River contributes largely to the regulation of ocean circulation and extent of sea-ice cover." },		
             { "slide" : 0,
 	      "fn": "teshekpuk",
               "title" : "Teshekpuk",
               "year" : "2019",
               "medium" : "Oil on canvas",
-              "size" : "24\" x 24\"",
+              "size" : "2' x 2'",
               "desc" : "<p>Teshekpuk Lake is the world’s largest thermokarst lake in Alaska’s North Slope region, currently being considered for development for oil and gas by ConocoPhilips. Teshekpuk Lake is a critical habitat for migratory waterfowl, the Teshekpuk Caribou Herd, and other wildlife and a sacred place for Iñupiat Peoples. In 2019, the Native Village of Nuiqsut and several environmental advocacy organizations sued the federal government over the decision to allow oil-drilling in this special place. The Bureau of Land Management is currently in the process of drafting a master plan and environmental impact statement for this development project.</p><br><br><a href=\"https://www.defendthesacredalaska.org/protect-teshekpuk/\">www.defendthesacredalaska.org</a><br><br> This painting was published in an article titled, <a href=\"http://theconversation.com/mathematics-of-scale-big-small-and-everything-in-between-115890\">\"Mathematics of scale: Big, small and everything in between\"</a> on The Conversation May 2019." },
 	    { "fn" : "forests",
 	      "title" : "Board Feet",
 	      "year" : "2020",
 	      "medium" : "Oil on canvas",
-	      "size" : "24\" x 24\"",
+	      "size" : "2' x 2'",
 	      "desc" : "Since Europeans arrived and began to colonize North America, forests have been cleared to make way for settlement, agriculture, logging and other resource extraction. A wave of deforestation and forest degradation spread westward with their expansion. On the east coast, grand forests once sprawled across the land so dense, it is said that a squirrel could have traveled from the Northeast to the Mississippi without touching the ground. Today, what few, sparse pockets of extant old-growth forest remain tucked in the crevices of the urbanization, suburban sprawl, and agriculture. In contrast, the forests of the northwestern regions of North America still stand tall, despite continued logging and other activities, including the practice of “clear-cutting” of old-growth forests, whose ancient, intricate ecosystems do not regenerate on a timescale that we will observe. The Canadian boreal forest represents 25 percent of the world’s remaining intact forest, considered “the lungs of the world” along with the Amazon rainforest; however, Canada is also a world leader in rate of forest loss. This painting depicts a patchwork of clearcut forested area northwest of Prince George, British Columbia. In addition to being intensively logged, this region’s forests have suffered destruction from the invasive mountain pine beetle and intensified forest fires, both exacerbated by climate change in recent years." },
             { "slide" : 1,
 	      "fn": "iliamna",
               "title" : "Iliamna",
               "year" : "2019",
               "medium" : "Oil on canvas",
-	      "size" : "24\" x 24\"",
+	      "size" : "2' x 2'",
 	      "desc" : "Lake Iliamna is the largest lake in Alaska, and the cradle for salmon spawn for Bristol Bay -- the last intact and thriving salmon fishery in the world. This precious watershed has been under threat from the proposed mining project, Pebble Mine. Alaskans passionate about salmon have been staving off attempts to mine this region. In comparison, salmon fisheries along the southern Pacific west coast of North America have dwindled to a trickle. We must remain vigilant to prevent this amazing ecosystem from becoming another sad story of what once was. </p><br><br><a href=\"https://www.savebristolbay.org/\">www.savebristolbay.org</a><br><br>" },
             { "slide" : 2,
-	      "fn" : "phytoplankton",
+	      "fn" : "phytoplankton",  
 	      "title" : "Diatoms",
 	      "year" : "2019",
               "medium" : "Oil on canvas",
-	      "size" : "24\" x 24\"",
+	      "size" : "2' x 2'",
 	      "desc" : "Phytoplankton paint the colors of the ocean – brilliant shades of green and turquoise, undulating in teeming swirls. Tiny photosynthesizing creatures, they are the base of the marine food web. They are at the foundation of life in the ocean. In the Gulf of Alaska, blooms of diatoms flourish on a influx of nutrients and minerals flushed in by annual glacial melt in the spring. Ocean acidification and warming are expected to impact the composition of phytoplankton communities – changing the colors of the oceans – and effecting a bottom-up reverberation in the dynamics of ocean creatures." },
  { "fn" : "yukonkusk",
 	      "title" : "Yukon and Kuskokwim Rivers Study",
 	      "year" : "2020",
 	      "medium" : "Acrylic on canvas",
 	      "size" : "5\" x 5\"" },
-            { "fn": "land",
+            { "fn": "land", 
 	      "title" : "Taiga Study",
 	      "year" : "2019",
               "medium" : "<p>Graphite pencil</p> <p>on paper</p>",
@@ -93,7 +815,7 @@ var site = {
 	      "size" : "4\" x 5\"" },
 
           ] },
-        "dystopic present" : {
+        "dystopic present" : { 
           "gallery": [
 	    { "fn" : "cars",
 	      "title" : "Autoimmune",
@@ -122,7 +844,7 @@ var site = {
 	      "title" : "Scavengers",
 	      "year" : "2016",
 	      "medium" : "Watercolor",
-	      "size" : "4\" x 6\""},
+	      "size" : "4\" x 6\""}, 
  	    ] },
         "nature": {
           "gallery": [
@@ -170,10 +892,10 @@ var site = {
 	      "year" : "2009",
 	      "medium" : "Charcoal on watercolor paper",
 	      "size" : "22\" x 30\"" },
-
+	
 ] } } },
     "illustration" : {
-      "gallery": [
+      "gallery": [ 
 	     { "fn" : "beaverdamscene",
 	      "title" : "Beavers",
 	      "year" : "2020",
@@ -230,7 +952,7 @@ var site = {
     "about" : {},
     "news" : {},
     "contact" : {},
-    "shop" : {} } }
+    "shop" : {}, } }
 
 /* translate between spaces and dashes in navigation headings */
 var fragify = function (str) {
@@ -247,41 +969,41 @@ var defor = function (val, def) {
   else { return(val) } }
 
 /* This generates the main image and description HTML and puts it in place */
-var loadimage = function(imgobj) {
+var loadimage = function(imgobj) { 
   var main = document.getElementById('main') ;
   var desc = document.getElementById('desc') ;
 
-  main.innerHTML = '<img id="imain" ' +
+  main.innerHTML = '<img id="imain" ' + 
      // the onclick handler is for lightbox:
-    'onclick="openModal();currentSlide(' + (imgobj.slideindex + 1) + ')"' +
-    ' src="images/' + imgobj.fn + '.jpg" />'
+    'onclick="openModal();currentSlide(' + (imgobj.slideindex + 1) + ')"' + 
+    ' src="images/' + imgobj.fn + '.jpg" />' 
   desc.innerHTML = '<p><em>' + defor(imgobj.title, '') + '</em></p><br>' +
     '<p>' + defor(imgobj.year, '') + '</p>' +
-	'<p>' + defor(imgobj.medium, '') + '</p>' +
-	'<p>' + defor(imgobj.size, '') + '<div class="description" id="description"' +
+	'<p>' + defor(imgobj.medium, '') + '</p>' + 
+	'<p>' + defor(imgobj.size, '') + '<div class="description" id="description"' + 
     '</p><br>' +
-    defor(imgobj.desc, '') +
-    '</div>' }
+    defor(imgobj.desc, '') + 
+    '</div>' } 
 
 
 /* This creates the "gallery" object. */
 var loadgallery = function(galobj) {
   var div = document.getElementById('container3') ;
-  var ih = '<div class="thumbs" id="thumbs"></div>' +
+  var ih = '<div class="thumbs" id="thumbs"></div>' + 
     '<div class="main" id="main"></div>' + '<aside class="desc" id="desc"></aside>' +
     // For lightbox:
-    '<div id="myModal" class="modal">' +
+    '<div id="myModal" class="modal">' + 
     '<span class="close cursor" onclick="closeModal()">&times;</span>' +
     '<div class="modal-content">' ;
   // lightbox images (with titles, years):
   for (i in galobj.gallery) {
-    ih = ih + '<div class="mySlides" style="text-align:center"><img src="images/' +
+    ih = ih + '<div class="mySlides" style="text-align:center"><img src="images/' + 
       galobj.gallery[i].fn + '.jpg"><br /><em>' +
       galobj.gallery[i].title + '</em>' + ", " +
-      galobj.gallery[i].year +
+      galobj.gallery[i].year + 
       '<br><br><p>' +
       '</div>' }
-  ih = ih + '<a class="prev" onclick="plusSlides(-1)">&#10094;</a>' +
+  ih = ih + '<a class="prev" onclick="plusSlides(-1)">&#10094;</a>' + 
     '<a class="next" onclick="plusSlides(1)">&#10095;</a>' +
     '</div></div>' ;
 
@@ -292,14 +1014,14 @@ var loadgallery = function(galobj) {
   for (i in galobj.gallery) {
     var painting = galobj.gallery[i] ;
     painting.slideindex = Math.floor(i) // <- for lightbox *floor makes this an integer
-    var img = document.createElement("img") ;
-    img.setAttribute("src", "images/" + painting.fn + "_thumb.jpg") ;
+    var img = document.createElement("img") ;		
+    img.setAttribute("src", "images/" + painting.fn + "_thumb.jpg") ;		
     img.addEventListener("click", function () {
       loadimage(this) }.bind(painting), false) ;  // bind is element of a function, sets 'this' to 'painting'
     thumbs.appendChild(img) ; }
 
   loadimage(galobj.gallery[0]) ;
-}
+} 
 
 /*modal pop-up*/
 function openModal() {
@@ -338,14 +1060,14 @@ function showSlides(n) {
 }
 
 /* Main section intro pages (TO DO)*/
-var paintings = '';
+var paintings = '';	
 
 var illus = '';
 
 var illusmodal = '<div class="mySlides"><img src=\"photographs/020.jpg\"></div> <a class="prev" onclick="plusSlides(-1)">&#10094;</a><a class="next" onclick="plusSlides(1)">&#10095;</a>';
 
 
-/*var mi = document.getElementById("imain") ;
+/*var mi = document.getElementById("imain") ; 
 var modalImg = document.getElementById("img01");
 mi.addEventListener("click", function(){ alert("Hello World!"); }); */
 
@@ -361,24 +1083,26 @@ var community ='<div>tst</div>';
 var bio = '<div class=\"bio\" id=\"bio\"><img src=\'\'><div class=\"biotext\"<p>Gaea Cherissa Dukelow is an artist/ecologist currently based in Fairbanks, Alaska. She is a granddaughter of midwestern agriculture, but raised at the edge of a gradient of eastern suburban sprawl and deciduous forest. After drifting into the charmingly gritty, beautiful complexity of Philadelphia for several years, she gathered up a satchel of pent-up wanderlust and exported herself to the vast, last frontier, the Golden Heart City, Fairbanks, Alaska. There, she collects ecological data by occuption, and occupies a studio at Well Street Art Company. </p><br><p>Having studied art at the Maryland Institute College of Art in Baltimore, MD and forest ecology at SUNY College of Environmental Science and Forestry in Syracuse, New York, she manifests a view of the world that mixes intuition and myth-making with critical analysis and reflection. Inspired both by the infinite beauty of the natural world and the mourning of its destruction, she grapples with the cognitive dissonance left behind in the wake of this strange, modern world, memorializing this sensation with the vividness of traditional painting media. </p><br></div><p class=\"cvp\"><button class=\"cv\"><a href=\"GCherissaDukelow--CV.pdf" download>>>  CV << </a></button></p>';
 
 /*News page*/
-var news = '<div class=\"news\"><div class=\"newstext"\"><object data="news.html" width="100%" height="100%" ></object></div>';
+var news = '<div class=\"news\"><div class=\"newstext"\">   <h4><u>September 15, 2020</u></h4><br><p></p><br><img src=\"newsphotos/earthscapeswall.JPG\" height=\"250px\" class=\"center\"></p><br><p>The Northern Alaska Environmental Center Featured Artist of 2020 show with the Lemonade Stand was a great and lovely success! It was a beautiful fall evening with good spirits. The show remains intact in the Lemonade Stand adjacent to Tamara\'s house for folks who were not able to make the Saturday show. To come see the show, send me an email at the address at the bottom of this webpage, or through the \'contact\' section. The show will remain until the end of September, like leaves falling from trees.</p>   <br><p><img src=\"newsphotos/flowersnotes.JPG\" height=\"250px\" class=\"center\"></p><br>                     <h4><u>September 6, 2020</u></h4><br>  <p>The Fairbanks Daily News-Miner was kind enough to interview me and feature me in a page in their Sunday paper today! Article by David James.</p><br><a href=\"http://www.newsminer.com/features/sundays/becoming_alaskan/the-earth-is-her-canvas-and-cherissa-dukelow-is-capturing-its-changes/article_39cf2bc4-ef35-11ea-b175-e766fb0846db.html"><em>The Earth is her canvas, and Cherissa Dukelow is capturing its changes</em></a></p><br>  <p><a href=\"newsphotos/newsminer.jpg\"><img src=\"newsphotos/newsminer_crop.jpg\" width=\"100%\" style=\"padding: 6px" \"></a></p><br>               <h4><u>August 30, 2020</u></h4><br><p></p><br><img src=\"newsphotos/LemonadeIG.jpg\" height=\"250px\" class=\"center\"></p><br><p>The Northern Alaska Environmental Center has been so kind to choose me to be their \"Featured Artist of 2020,\" and we are coordinating with the Lemonade Stand, a mobile art gallery to exhibit the paintings I have created for them and otherwise outside their office on College Road on Saturday, September 12. Details below:</p><br> <p>*    *    *    *    *    *    *    *    *    *    *    *    *    *    *    *    *    *    *    *    *</p><br><p><b><u>Where</b></u>: The Northern Alaska Environmental Center, 830 College Road, Fairbanks, AK</p><br><p><b><u>When</b></u>:  Saturday, September 12, 5pm - 8pm</p><br><p><b><u>Covid</b></u>: Please wear a mask & stay distanced 6 ft apart. You will be given a number, and Tamara will call your number when it is your turn to enter the Lemonade Stand. (Folks will enter one at a time, or one bubble group at a time.)</p><br><p><b><u>Facebook Event Page</b></u>:  <a href=\"https://www.facebook.com/events/779611899449074\">https://www.facebook.com/events/779611899449074</a></p><br><p>*    *    *    *    *    *    *    *    *    *    *    *    *    *    *    *    *    *    *    *    *</p><br>             <h4><u>June 8, 2020</u></h4><br><p>Today I participated in the Tanana Valley Watershed Association\'s Storm Drain Art Day in downtown Fairbanks on 3rd Avenue next to the post office, and painted my design they selected to be included -- a beaver swimming with a branch in its mouth toward the storm drain.</p><br> <div class=\"center-div"><img src=\"beaverphotos/prog1.jpg\" height=\"250px\" style=\"padding: 6px"><img src=\"beaverphotos/close.jpg\" height=\"250px\" style=\"padding: 6px" ></div></p> <br><p><a href=\"http://www.tvwatershed.org/\">http://www.tvwatershed.org/</a></p><br><p><h4><u>June 5, 2020</u>                </h4><br>For June 2020 first friday, my work was included in a group show for the grand opening show of Tamara Wilson\'s Lemonade Stand. The show was titled, <i>13+</i>, and included one piece of work from 13 artists of various styles. It as so exciting to see Tamara\'s amazing mobile galley, an artwork in itseslf and a labor of love.</p><br><img src=\"lemonadestand/wall.jpg\" height=\"250px\" class=\"center\"></p> <br><p><a href=\"https://www.instagram.com/lemonadester/\">https://www.instagram.com/lemonadester/</a></p><p><a href=\"www.lemonadester.com\">www.lemonadester.com</a></p><br><p>          <h4><u>June 4, 2020</u></h4><br><p>I have been kindly selected by the Northern Alaska Environmental Center as their Featured Artist of 2020! They are commissioning work from me similar to my previous \'Earthscapes\' painting series that will be of locations they choose to go along with their work fighting aginst oil drilling and mining projects in Alasksa wilderness areas: Teshekpuk Lake, the Arctic National Wildlife Refuge, and the Brooks Range. They will feature my art in their graphic materials, and we will put together a show of our work this fall. Thankful for this opportunity!</p><br><a href=\"https://northern.org/\">https://northern.org/</a></p><br><br><br></div>';
 
 //<br><p>More photos <a href=\'\'>here</a>.</p>
 
 /*Contact page*/
 var contactform = '<div class=\"contactform-container\" id=\"contactform\"><p><em>Send me a message, ask about buying originals, commissions, or request to receive (very occasional) news:</em></p><br><form action=\"https://formspree.io/mgekdezk\" method="POST"><label>Name</label><input type=\"text\" id=\"name\" name=\"name\" placeholder=\"Your name..\"><label>Email Address</label><input type=\"text\" id=\"email\" name=\"_replyto\" placeholder=\"Your email address..\"><label>Subject</label><input type=\"text\" id=\"subject\" name=\"subject\" placeholder=\"Subject..\"><label>Message</label><textarea id=\"message\" name=\"message\" placeholder=\"Write something..\" style=\"height:200px\"></textarea><input type=\"submit\" value=\"Submit\"></form></div>';
 
+/*Shop page*/
+var shop = '<div class=\"shop\" id=\"shop\"><div><p><img src="images/mackenzie_thumb.jpg"></p><p><a href="https://www.inprnt.com/gallery/gaea-cherissa/deh-cho/">Prints</a></p><p>Stickers</p><br></div><div><p><img src="images/phytoplankton_thumb.jpg"></p><p><a href="https://www.inprnt.com/gallery/gaea-cherissa/diatoms/">Prints</a></p><p>Stickers</p><br></div><div><p><img src="images/iliamna_thumb.jpg"></p><p><a href="https://www.inprnt.com/gallery/gaea-cherissa/iliamna/">Prints</a></p><p>Stickers</p><br></div><div><p><img src="images/forests_thumb.jpg"></p><p><a href="https://www.inprnt.com/gallery/gaea-cherissa/board-feet/">Prints</a></p><p>Stickers</p><br></div><div><p><img src="images/earthcolony_thumb.jpg"></p><p><a href="https://www.inprnt.com/gallery/gaea-cherissa/earth-colony/">Prints</a></p><p>Stickers</p><br></div><div><p><img src="images/cars_thumb.jpg"></p><a href="https://www.inprnt.com/gallery/gaea-cherissa/autoimmune/"><p>Prints</a></p><br></div></div>' ;
 
 
 /* the hash.substring is the "fragment identifier" (see wikipedia, excerpt below). By loading
 the appropriate content corresponding to the fragment identifier, you can make
 stable shareable links. */
-	/* The fragment identifier introduced by a hash mark # is the optional last part of a URL for a document.
-	It is typically used to identify a portion of that document. Example: In http://www.example.org/foo.html#bar
+	/* The fragment identifier introduced by a hash mark # is the optional last part of a URL for a document. 
+	It is typically used to identify a portion of that document. Example: In http://www.example.org/foo.html#bar 
 	the fragment refers to the element with id="bar". */
 /* This section is creating the fragments of the page - the sections and subsections - based on the structure of var site above.*/
 var loadfragment = function (fragarg) {
-  var frag = (typeof fragarg === 'string') ? fragarg : 		/* ? : is the 'conditional operator' --- condition ? value-if-true :
+  var frag = (typeof fragarg === 'string') ? fragarg : 		/* ? : is the 'conditional operator' --- condition ? value-if-true : 
 									value-if-false (in other words, the question is equivalent to an if statement and 									the colon is equivalent to else statement*/
     window.location.hash.substring(1) ;      /* obtains the fragment identifier (value afer #) from url --- the element id, or in this case, the JS "keys" in var site */
   var parts = frag.split('.')		/* The split() method is used to split a string into an array of substrings, and returns the new array.
@@ -389,29 +1113,29 @@ var loadfragment = function (fragarg) {
     var d = "dystopic-present" ;
     var dp = defragify(d) ;
     var loadseg = function (seg) {
-	  document.getElementById("container3").innerHTML = seg }
-    for (i in parts) {
-      if (typeof page !== 'undefined') {		/* if var page is set = to something (contains an additional subsection), see next line
-						to determine which subsection of the page should be loaded,
+	  document.getElementById("container3").innerHTML = seg } 
+    for (i in parts) {		
+      if (typeof page !== 'undefined') {		/* if var page is set = to something (contains an additional subsection), see next line 
+						to determine which subsection of the page should be loaded, 
 						i.e. which part of var site we're at */
         page = page.nav[defragify(parts[i])] }		/*var defragify replaces dashes with spaces. This specifies which subsection to load based on i part */
 
-
+      
 		     }
     if (typeof page === 'undefined') { 	loadgallery(site.nav.paintings.nav.earthscapes) }
     if (frag == "paintings") { loadgallery(site.nav.paintings.nav.earthscapes) }
     if (frag == "paintings.earthscapes") { loadseg(es) }
     if (frag == "paintings" + "." + d) { loadgallery(site.nav.paintings.nav[defragify(dp)]) }
-    if (frag == "paintings.nature") { loadgallery(site.nav.paintings.nav.nature) }
-    if (frag == "paintings.figures") { loadgallery(site.nav.paintings.nav.figures) }
+    if (frag == "paintings.nature") { loadgallery(site.nav.paintings.nav.nature) }	
+    if (frag == "paintings.figures") { loadgallery(site.nav.paintings.nav.figures) }		 
     if (frag == "illustration") { loadgallery(site.nav.illustration) }
     if (frag == "photographs") { loadseg(photo) }
    // if (frag == "community" ) { loadseg(community) }
     if (frag == "about") { loadseg(bio) }
     if (frag == "news") { loadseg(news) }
-    if (frag == "contact") { loadseg(contactform) }
-    if (frag == "shop") { open("https://www.inprnt.com/gallery/gaea-cherissa/") }
-     }
+    if (frag == "contact") { loadseg(contactform) }	
+    if (frag == "shop") { loadseg(shop) }		
+     }		
 
 
 /* ^ This whole section is to create the sections of the webpage and how to choose which one should be loaded.  */
@@ -421,23 +1145,23 @@ var loadfragment = function (fragarg) {
 var makenavbar = function () {
   var navbar = document.getElementById('navbar') ;
   var ih = "<nav><ul>" ;
-  for (var page in site.nav) {
+  for (var page in site.nav) {		
     if (site.nav[page].nav) {
       ih = ih + '<li class="dropdown">' ;
-      ih = ih + '<a href="#' + fragify(page) + '" onClick="loadfragment(\'' +
-        fragify(page) + '\')" class="dropbtn">' +
+      ih = ih + '<a href="#' + fragify(page) + '" onClick="loadfragment(\'' + 		
+        fragify(page) + '\')" class="dropbtn">' + 
         page + '</a>' ;
       ih = ih + '<div class="dropdown-content">' ;
-      for (var subpage in site.nav[page].nav) {
-        ih = ih + '<a href="#' + fragify(page + '.' + subpage) +
-          '" onClick="loadfragment(\'' +
-          fragify(page + '.' + subpage) + '\')" class="dropbtn">' +
+      for (var subpage in site.nav[page].nav) { 
+        ih = ih + '<a href="#' + fragify(page + '.' + subpage) + 
+          '" onClick="loadfragment(\'' + 
+          fragify(page + '.' + subpage) + '\')" class="dropbtn">' + 
           subpage + '</a>' ;
       }
       ih = ih + '</div>' ;
     } else {
-      ih = ih + '<li><a href="#' + fragify(page) +
-        '" onClick="loadfragment(\'' + fragify(page) + '\')">' +
+      ih = ih + '<li><a href="#' + fragify(page) + 
+        '" onClick="loadfragment(\'' + fragify(page) + '\')">' + 
         page + '</a></li>' ;
   } }
   ih = ih + "</ul></nav>" ;
@@ -463,21 +1187,21 @@ window.addEventListener("load", loadfragment) ;
 </head>
 <body>
 
-<div class="container">
+<div class="container"> 
 
 	  <div class="gaea">
 		<a href="index.html" style="text-decoration: none"><h1>gæa</h1></a>
 	  </div>
 <div><a href="javascript:void(0);" class="icon" onclick="hambnav()">
-   		&#x25BC;</a>
+   		&#x25BC;</a>		
 		</div>
-	<div class="container2">
+	<div class="container2"> 
 
 		<!-- Navigation Bar -->
 		  <div id="navbar" class="navbar">
           </div>
-		<div class="container3" id="container3">
-           <!-- Javascript fills this in -->
+		<div class="container3" id="container3"> 
+           <!-- Javascript fills this in --> 
 		</div>
         <!-- Footer is the same for all pages -->
 			<footer>
@@ -489,14 +1213,15 @@ window.addEventListener("load", loadfragment) ;
 					<a href="index.html" style="text-decoration: none"><h1>cherissa</h1></a>
 					</div>
 					<aside class="send">
-					<p>Send messages to:
+					<p>Send messages to: 
 					<p></p>cherissa [ at ] localpost.io</p>
 					<br>
 					<p>Follow on Instagram <a href="https://www.instagram.com/gaea_cherissa/" style="text-decoration: none">@gaea-cherissa</a></p>
-
 					</aside>
 			</footer>
 		</div>
 	</div>
 </div>
 </body>
+
+
